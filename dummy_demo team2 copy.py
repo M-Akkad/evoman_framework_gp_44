@@ -23,7 +23,7 @@ headless = True
 if headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
 
-experiment_name = 'team_2_test'
+experiment_name = 'team_2_test_run_10'
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 
@@ -33,18 +33,19 @@ n_hidden_neurons = 10
 
 # initializes simulation in individual evolution mode, for single static enemy.
 env = Environment(experiment_name=experiment_name,
-                  enemies=[6],
+                  enemies=[3],
                   playermode="ai",
                   player_controller=player_controller(n_hidden_neurons),
                   enemymode="static",
                   level=2,
+                  randomini="yes",
                   speed="fastest",
                   visuals=False)
 
 # genetic algorithm params
 n_vars = (env.get_num_sensors() + 1) * n_hidden_neurons + (n_hidden_neurons + 1) * 5
 
-run_mode = 'train'
+run_mode = 'test'
 
 dom_u = 1
 dom_l = -1
@@ -217,19 +218,20 @@ if run_mode == 'train':
 
 # Test the best solution
 elif run_mode == 'test':
+   
     try:
         # Load the best solution from the file
-        best_sol = np.loadtxt(experiment_name + '/best.txt')
+        best_sol = np.loadtxt('/Users/s.broos/Documents/EVO/evoman_framework_gp_44/team2_test_run_enemy310/final_overall_best.txt')
         print('\n RUNNING SAVED BEST SOLUTION \n')
 
         # Set the speed to normal for testing (you may adjust this)
-        env.update_parameter('speed', 'normal')
+        env.update_parameter('speed', 'fastest')
+        for i in range(5):
+            # Evaluate the best solution by passing it to the environment for testing
+            f, p, e, t = env.play(pcont=best_sol)
 
-        # Evaluate the best solution by passing it to the environment for testing
-        f, p, e, t = env.play(pcont=best_sol)
-
-        # Print the evaluation results (fitness, player life, enemy life, time taken)
-        print(f"Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}")
+            # Print the evaluation results (fitness, player life, enemy life, time taken)
+            print(f"Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {p - e}")
 
         sys.exit(0)  # Exit after testing the best solution
 

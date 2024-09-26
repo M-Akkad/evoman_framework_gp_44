@@ -1,9 +1,3 @@
 
 
 MESSAGE: Pygame initialized for simulation.
-
-PARAMETER CHANGE: enemies = [1]
-
-PARAMETER CHANGE: level = 2
-
-PARAMETER CHANGE: speed = normal
