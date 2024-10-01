@@ -13,8 +13,9 @@ from demo_controller import player_controller
 # imports other libs
 import time
 import numpy as np
-from math import fabs,sqrt
+from math import fabs, sqrt
 import glob, os
+import contextlib
 
 # ATTENTION: To train change headless to true, visuals(within env) to false and run_mode to train job
 
@@ -23,18 +24,17 @@ headless = True
 if headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
 
-
-experiment_name = 'team1_test'
+experiment_name = 'task2_mo'
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 
 n_hidden_neurons = 10
 
+# Initializes simulation in individual evolution mode, for multiple enemies.
+enemies = [1, 2, 3]  # Specify multiple enemies to train on
 
-
-# initializes simulation in individual evolution mode, for single static enemy.
 env = Environment(experiment_name=experiment_name,
-                  enemies=[3],
+                  enemies=enemies,
                   playermode="ai",
                   player_controller=player_controller(n_hidden_neurons),
                   enemymode="static",
@@ -44,22 +44,18 @@ env = Environment(experiment_name=experiment_name,
                   visuals=False)
 
 # default environment fitness is assumed for experiment
+env.state_to_log()  # checks environment state
 
-env.state_to_log() # checks environment state
-
-
-####   Optimization for controller solution (best genotype-weights for phenotype-network): Ganetic Algorihm    ###
+####   Optimization for controller solution (best genotype-weights for phenotype-network): Genetic Algorithm   ###
 
 ini = time.time()  # sets time marker
 
-
-# genetic algorithm params
-
+# Genetic algorithm params
 
 # number of weights for multilayer with 10 hidden neurons
-n_vars = (env.get_num_sensors()+1)*n_hidden_neurons + (n_hidden_neurons+1)*5
+n_vars = (env.get_num_sensors() + 1) * n_hidden_neurons + (n_hidden_neurons + 1) * 5
 
-run_mode = 'test' # train or test
+run_mode = 'train'  # train or test
 dom_u = 1
 dom_l = -1
 npop = 100
@@ -67,19 +63,34 @@ gens = 50
 mutation_rate = 0.1
 mutation_weight = 0.3
 n_parents = 2
-k = 3 # Tournament size
+k = 3  # Tournament size
 num_offspring = 50
 last_best = 0
 
+# Define a null output context to suppress prints and error outputs
+class NullOutput:
+    def write(self, _):
+        pass
+
+    def flush(self):
+        pass
+
+# Update parameter without logging messages
+def update_parameter_silently(env, param, value):
+    with contextlib.redirect_stdout(NullOutput()), contextlib.redirect_stderr(NullOutput()):
+        env.update_parameter(param, value)
 
 # Evaluate fitness
 def evaluate_population(population):
     fitness_scores = []
     for individual in population:
-        f, p, e, t = env.play(pcont=individual)
-        fitness_scores.append(f)
+        total_fitness = 0
+        for enemy in enemies:
+            update_parameter_silently(env, 'enemies', [enemy])  # Set the current enemy silently
+            f, p, e, t = env.play(pcont=individual)
+            total_fitness += f
+        fitness_scores.append(total_fitness / len(enemies)) 
     return fitness_scores
-
 
 # Tournament selection
 def tournament_selection(population, fitness_scores, k):
@@ -102,7 +113,6 @@ def multi_parent_recombination(parents):
     for i in range(n_vars):
         child[i] = np.mean([parent[i] for parent in parents])
     return child
-    
 
 # Mutation
 def mutate(child, mutation_rate, mutation_weight):
@@ -110,8 +120,6 @@ def mutate(child, mutation_rate, mutation_weight):
         if np.random.rand() < mutation_rate:
             child[i] += np.random.uniform((-1 * mutation_weight), mutation_weight)
     return child
-
-
 
 # Evolution loop
 def evolve_population(population, fitness_scores, num_offspring=50, mutation_rate=0.1, mutation_weight=0.1, k=3, n_parents=2):
@@ -121,24 +129,24 @@ def evolve_population(population, fitness_scores, num_offspring=50, mutation_rat
     for _ in range(num_offspring):
         # Randomly select n_parents without replacement
         parent_indices = np.random.choice(len(selected_parents), n_parents, replace=False)
-        
+
         # Collect the selected parents based on the random indices
         parents = [selected_parents[i] for i in parent_indices]
 
         child = multi_parent_recombination(parents)
         mutated_child = mutate(child, mutation_rate, mutation_weight)
         offspring.append(mutated_child)
-    
+
     # Combine population with offspring and re-evaluate
     new_population = population + offspring
     new_fitness_scores = evaluate_population(new_population)
-    
+
     # Select the top `npop` individuals for the next generation
     combined = list(zip(new_population, new_fitness_scores))
     combined.sort(key=lambda x: x[1], reverse=True)  # Sort by fitness (higher is better)
     population = [ind for ind, fitness in combined[:npop]]
     fitness_scores = [fitness for ind, fitness in combined[:npop]]
-    
+
     return population, fitness_scores
 
 # Main loop
@@ -149,21 +157,21 @@ if run_mode == 'train':
 
     for run in range(1, num_runs + 1):
         print(f"\nStarting Run {run}...\n")
-        
+
         # Create a unique folder for each run
-        experiment_name = f'team1_test_run_enemy3{run}'
+        experiment_name = f'task2_mo_run_{run}'
         if not os.path.exists(experiment_name):
             os.makedirs(experiment_name)
-        
+
         # Initialize environment for each run
         env = Environment(experiment_name=experiment_name,
-                        enemies=[3],
-                        playermode="ai",
-                        player_controller=player_controller(n_hidden_neurons),
-                        enemymode="static",
-                        level=2,
-                        speed="fastest",
-                        visuals=False)
+                          enemies=enemies,
+                          playermode="ai",
+                          player_controller=player_controller(n_hidden_neurons),
+                          enemymode="static",
+                          level=2,
+                          speed="fastest",
+                          visuals=False)
 
         env.state_to_log()  # Log environment state
 
@@ -173,78 +181,77 @@ if run_mode == 'train':
         overall_best_individual = None
         overall_best_fitness = -float('inf')
 
-        # Save results for the first population
-        with open(experiment_name + '/results.txt', 'a') as file_aux:
-            file_aux.write('\n\ngen best mean std')
-            print(f'\n GENERATION 0 {round(fitness_scores[np.argmax(fitness_scores)], 6)} {round(np.mean(fitness_scores), 6)} {round(np.std(fitness_scores), 6)}')
-            file_aux.write(f'\n0 {round(fitness_scores[np.argmax(fitness_scores)], 6)} {round(np.mean(fitness_scores), 6)} {round(np.std(fitness_scores), 6)}')
-
         # Evolutionary process
+        avg_fitness_per_generation = []  # Track average fitness per generation
         best_old = 0
         for generation in range(gens):
             print(f"\nEvolving Generation {generation} for Run {run}")
             population, fitness_scores = evolve_population(population, fitness_scores, num_offspring, mutation_rate, mutation_weight, k, n_parents)
 
-            # Update best, mean, std after evolving
-            best = np.argmax(fitness_scores)
-            mean = np.mean(fitness_scores)
-            std = np.std(fitness_scores)
+            # Evaluate best individual of the current generation for each enemy
+            best_idx = np.argmax(fitness_scores)
+            best_individual = population[best_idx]
+            best_fitness = fitness_scores[best_idx]
+
+            # Save the best individual of the current generation
+            np.savetxt(f"{experiment_name}/best_individual_generation_{generation}.txt", best_individual)
+            with open(f"{experiment_name}/best_fitness_generation.txt", 'a') as best_file:
+                best_file.write(f"Generation {generation}: Best Fitness: {best_fitness}\n")
+
+            # Calculate and save the average fitness for the current generation
+            avg_fitness = np.mean(fitness_scores)
+            avg_fitness_per_generation.append(avg_fitness)
+            with open(f"{experiment_name}/average_fitness_per_generation.txt", 'a') as avg_file:
+                avg_file.write(f"Generation {generation}: Average Fitness: {avg_fitness}\n")
+
+            # Evaluate best individual for each enemy and log results
+            for enemy in enemies:
+                update_parameter_silently(env, 'enemies', [enemy])  # Set the current enemy silently
+                f_best, p_best, e_best, t_best = env.play(pcont=best_individual)
+                gain_best = p_best - e_best
+
+                # Save the best individual's evaluation metrics for each enemy
+                with open(f"{experiment_name}/best_individual_enemy_{enemy}_results.txt", 'a') as file_aux:
+                    print(f' GENERATION {generation} Best for Enemy {enemy}: Fitness: {round(f_best, 6)}, Player Life: {p_best}, Enemy Life: {e_best}, Time: {t_best}, Gain: {gain_best}')
+                    file_aux.write(f'\nGeneration {generation} - Best Individual for Enemy {enemy}: Fitness: {round(f_best, 6)}, Player Life: {p_best}, Enemy Life: {e_best}, Time: {t_best}, Gain: {gain_best}')
 
             # Track the overall best individual and fitness for this run
-            if fitness_scores[best] > overall_best_fitness:
-                overall_best_fitness = fitness_scores[best]
-                overall_best_individual = population[best]
-                np.savetxt(experiment_name + '/overall_best.txt', overall_best_individual)
+            if best_fitness > overall_best_fitness:
+                overall_best_fitness = best_fitness
+                overall_best_individual = best_individual
 
-            # Save the generation results
-            with open(experiment_name + '/results.txt', 'a') as file_aux:
-                print(f' GENERATION {generation} Best Fitness: {round(fitness_scores[best], 6)}, Mean Fitness: {round(mean, 6)}, Std: {round(std, 6)}')
-                file_aux.write(f'\n{generation} {round(fitness_scores[best], 6)} {round(mean, 6)} {round(std, 6)}')
-
-            # Save the best individual for this generation
-            best_individual = population[best]
-            np.save(f"{experiment_name}/best_individual_gen_{generation}.npy", best_individual)
-
-            # Save the overall best individual so far
-            if best_old < fitness_scores[best]:
-                best_old = fitness_scores[best]
-                np.savetxt(experiment_name + '/best.txt', best_individual)
-
-            # Save the current state
-            solutions = [population, fitness_scores]
-            env.update_solutions(solutions)
-
-            # Save the generation number
-            with open(experiment_name + '/gen.txt', 'w') as file_aux:
-                file_aux.write(str(generation))
-
-        # After evolution is completed, save the overall best individual
+        # After evolution is completed, save the all-time best individual
         if overall_best_individual is not None:
             np.savetxt(f"{experiment_name}/final_overall_best.txt", overall_best_individual)
             print(f"Overall best fitness for Run {run}: {overall_best_fitness}")
 
         print(f"\nRun {run} completed.\n")
 
-    print("\nAll 10 runs completed.")
-
+    print(f"\nAll {num_runs} runs completed.")
 
 
 # Test the best solution
 elif run_mode == 'test':
-   
+
     try:
         # Load the best solution from the file
-        best_sol = np.loadtxt('/Users/s.broos/Documents/EVO/evoman_framework_gp_44/team1_test_run_enemy310/final_overall_best.txt')
+        best_sol = np.loadtxt('/Users/s.broos/Documents/EVO/evoman_framework_gp_44/task2_run_1/final_overall_best.txt')
         print('\n RUNNING SAVED BEST SOLUTION \n')
 
         # Set the speed to normal for testing (you may adjust this)
-        env.update_parameter('speed', 'fastest')
-        for i in range(5):
-            # Evaluate the best solution by passing it to the environment for testing
-            f, p, e, t = env.play(pcont=best_sol)
+        update_parameter_silently(env, 'speed', 'normal')
 
-            # Print the evaluation results (fitness, player life, enemy life, time taken)
-            print(f"Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {p - e}")
+        # Loop through each enemy to evaluate the best solution separately
+        for enemy in enemies:
+            update_parameter_silently(env, 'enemies', [enemy])  # Set the current enemy silently
+
+            # Evaluate the best solution multiple times (e.g., 5 times) for each enemy
+            for i in range(5):
+                f, p, e, t = env.play(pcont=best_sol)
+
+                # Print the evaluation results (fitness, player life, enemy life, time taken)
+                gain = p - e
+                print(f"Enemy {enemy} - Test Run {i+1}: Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}")
 
         sys.exit(0)  # Exit after testing the best solution
 
