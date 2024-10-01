@@ -47,3 +47,5 @@ logs: on
 save logs: yes
 
 ########## Simulation state - END ###########
+
+PARAMETER CHANGE: speed = fastest

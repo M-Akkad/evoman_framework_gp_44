@@ -33,7 +33,7 @@ n_hidden_neurons = 10
 
 # initializes simulation in individual evolution mode, for single static enemy.
 env = Environment(experiment_name=experiment_name,
-                  enemies=[3],
+                  enemies=[1],
                   playermode="ai",
                   player_controller=player_controller(n_hidden_neurons),
                   enemymode="static",
@@ -221,7 +221,7 @@ elif run_mode == 'test':
    
     try:
         # Load the best solution from the file
-        best_sol = np.loadtxt('/Users/s.broos/Documents/EVO/evoman_framework_gp_44/team2_test_run_enemy310/final_overall_best.txt')
+        best_sol = np.loadtxt('/Users/s.broos/Documents/EVO/evoman_framework_gp_44/team2_test_run_10/final_overall_best.txt')
         print('\n RUNNING SAVED BEST SOLUTION \n')
 
         # Set the speed to normal for testing (you may adjust this)

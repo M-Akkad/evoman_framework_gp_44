@@ -39,7 +39,7 @@ env = Environment(experiment_name=experiment_name,
                   player_controller=player_controller(n_hidden_neurons),
                   enemymode="static",
                   level=2,
-                  randomini="yes",
+                  randomini="no",
                   speed="fastest",
                   visuals=False)
 
