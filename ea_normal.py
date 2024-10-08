@@ -19,15 +19,18 @@ import glob, os
 # ATTENTION: To train change headless to true, visuals(within env) to false and run_mode to train job
 
 # choose this for not using visuals and thus making experiments faster
-headless = False
+headless = True
 if headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
+
 
 experiment_name = 'team1_test'
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 
 n_hidden_neurons = 10
+
+
 
 # initializes simulation in individual evolution mode, for single static enemy.
 env = Environment(experiment_name=experiment_name,
@@ -36,16 +39,19 @@ env = Environment(experiment_name=experiment_name,
                   player_controller=player_controller(n_hidden_neurons),
                   enemymode="static",
                   level=2,
+                  randomini="no",
                   speed="fastest",
-                  visuals=True)
+                  visuals=False)
 
 # default environment fitness is assumed for experiment
 
 env.state_to_log()  # checks environment state
 
+
 ####   Optimization for controller solution (best genotype-weights for phenotype-network): Ganetic Algorihm    ###
 
 ini = time.time()  # sets time marker
+
 
 # genetic algorithm params
 
@@ -109,6 +115,7 @@ def mutate(child, mutation_rate, mutation_weight):
     return child
 
 
+
 # Evolution loop
 def evolve_population(population, fitness_scores, num_offspring=50, mutation_rate=0.1, mutation_weight=0.1, k=3,
                       n_parents=2):
@@ -142,100 +149,107 @@ def evolve_population(population, fitness_scores, num_offspring=50, mutation_rat
 # Main loop
 if run_mode == 'train':
 
-    # Check if there's an existing saved state
-    if not os.path.exists(experiment_name + '/evoman_solstate'):
-        print('\nNEW EVOLUTION\n')
+    # Number of runs
+    num_runs = 1
 
-        # Generate a new random population
+    for run in range(1, num_runs + 1):
+        print(f"\nStarting Run {run}...\n")
+
+        # Create a unique folder for each run
+        experiment_name = f'team1_test_run_enemy3{run}'
+        if not os.path.exists(experiment_name):
+            os.makedirs(experiment_name)
+
+        # Initialize environment for each run
+        env = Environment(experiment_name=experiment_name,
+                        enemies=[3],
+                        playermode="ai",
+                        player_controller=player_controller(n_hidden_neurons),
+                        enemymode="static",
+                        level=2,
+                        speed="fastest",
+                        visuals=False)
+
+        env.state_to_log()  # Log environment state
+
+        # Initialize the genetic algorithm variables
         population = [np.random.uniform(dom_l, dom_u, n_vars) for _ in range(npop)]
         fitness_scores = evaluate_population(population)
+        overall_best_individual = None
+        overall_best_fitness = -float('inf')
 
-        # Find the best individual and population statistics
-        best = np.argmax(fitness_scores)
-        mean = np.mean(fitness_scores)
-        std = np.std(fitness_scores)
-
-        # Set the starting generation to 0
-        ini_g = 0
-
-        # Save the current population and fitness scores
-        solutions = [population, fitness_scores]
-        env.update_solutions(solutions)
-
-    else:
-        print('\nCONTINUING EVOLUTION\n')
-
-        # Load the saved state from the environment
-        env.load_state()
-
-        # Retrieve the population and fitness scores from the saved state
-        population = env.solutions[0]
-        fitness_scores = env.solutions[1]
-
-        # Find the best individual and population statistics
-        best = np.argmax(fitness_scores)
-        mean = np.mean(fitness_scores)
-        std = np.std(fitness_scores)
-
-        # Load the last generation number from a file
-        with open(experiment_name + '/gen.txt', 'r') as file_aux:
-            ini_g = int(file_aux.readline().strip())
-
-    # Save results for the first population
-    with open(experiment_name + '/results.txt', 'a') as file_aux:
-        if ini_g == 0:
-            file_aux.write('\n\ngen best mean std')
-
-        print(f'\n GENERATION {ini_g} {round(fitness_scores[best], 6)} {round(mean, 6)} {round(std, 6)}')
-        file_aux.write(f'\n{ini_g} {round(fitness_scores[best], 6)} {round(mean, 6)} {round(std, 6)}')
-
-    # Evolutionary process
-    best_old = 0
-    for generation in range(ini_g, gens):
-        print(f"\nEvolving Generation {generation}")
-        population, fitness_scores = evolve_population(population, fitness_scores, num_offspring, mutation_rate,
-                                                       mutation_weight, k, n_parents)
-
-        # Update best, mean, std after evolving
-        best = np.argmax(fitness_scores)
-        mean = np.mean(fitness_scores)
-        std = np.std(fitness_scores)
-
-        # Save the generation results
+        # Save results for the first population
         with open(experiment_name + '/results.txt', 'a') as file_aux:
-            print(f' GENERATION {generation} {round(fitness_scores[best], 6)} {round(mean, 6)} {round(std, 6)}')
-            file_aux.write(f'\n{generation} {round(fitness_scores[best], 6)} {round(mean, 6)} {round(std, 6)}')
+            file_aux.write('\n\ngen best mean std')
+            print(f'\n GENERATION 0 {round(fitness_scores[np.argmax(fitness_scores)], 6)} {round(np.mean(fitness_scores), 6)} {round(np.std(fitness_scores), 6)}')
+            file_aux.write(f'\n0 {round(fitness_scores[np.argmax(fitness_scores)], 6)} {round(np.mean(fitness_scores), 6)} {round(np.std(fitness_scores), 6)}')
 
-        # Save the best individual for this generation
-        best_individual = population[best]
-        np.save(f"{experiment_name}/best_individual_gen_{generation}.npy", best_individual)
+        # Evolutionary process
+        best_old = 0
+        for generation in range(gens):
+            print(f"\nEvolving Generation {generation} for Run {run}")
+            population, fitness_scores = evolve_population(population, fitness_scores, num_offspring, mutation_rate, mutation_weight, k, n_parents)
 
-        if best_old < fitness_scores[best]:
-            best_old = fitness_scores[best]
-            np.savetxt(experiment_name + '/best.txt', best_individual)
+            # Update best, mean, std after evolving
+            best = np.argmax(fitness_scores)
+            mean = np.mean(fitness_scores)
+            std = np.std(fitness_scores)
 
-        # Save the current state
-        solutions = [population, fitness_scores]
-        env.update_solutions(solutions)
+            # Track the overall best individual and fitness for this run
+            if fitness_scores[best] > overall_best_fitness:
+                overall_best_fitness = fitness_scores[best]
+                overall_best_individual = population[best]
+                np.savetxt(experiment_name + '/overall_best.txt', overall_best_individual)
 
-        # Save the generation number
-        with open(experiment_name + '/gen.txt', 'w') as file_aux:
-            file_aux.write(str(generation))
-# Test Mode: Load and Run the Best Saved Solution
+            # Save the generation results
+            with open(experiment_name + '/results.txt', 'a') as file_aux:
+                print(f' GENERATION {generation} Best Fitness: {round(fitness_scores[best], 6)}, Mean Fitness: {round(mean, 6)}, Std: {round(std, 6)}')
+                file_aux.write(f'\n{generation} {round(fitness_scores[best], 6)} {round(mean, 6)} {round(std, 6)}')
+
+            # Save the best individual for this generation
+            best_individual = population[best]
+            np.save(f"{experiment_name}/best_individual_gen_{generation}.npy", best_individual)
+
+            # Save the overall best individual so far
+            if best_old < fitness_scores[best]:
+                best_old = fitness_scores[best]
+                np.savetxt(experiment_name + '/best.txt', best_individual)
+
+            # Save the current state
+            solutions = [population, fitness_scores]
+            env.update_solutions(solutions)
+
+            # Save the generation number
+            with open(experiment_name + '/gen.txt', 'w') as file_aux:
+                file_aux.write(str(generation))
+
+        # After evolution is completed, save the overall best individual
+        if overall_best_individual is not None:
+            np.savetxt(f"{experiment_name}/final_overall_best.txt", overall_best_individual)
+            print(f"Overall best fitness for Run {run}: {overall_best_fitness}")
+
+        print(f"\nRun {run} completed.\n")
+
+    print("\nAll 10 runs completed.")
+
+
+
+# Test the best solution
 elif run_mode == 'test':
+
     try:
         # Load the best solution from the file
         best_sol = np.loadtxt(experiment_name + '/best.txt')
         print('\n RUNNING SAVED BEST SOLUTION \n')
 
         # Set the speed to normal for testing (you may adjust this)
-        env.update_parameter('speed', 'normal')
+        env.update_parameter('speed', 'fastest')
+        for i in range(5):
+            # Evaluate the best solution by passing it to the environment for testing
+            f, p, e, t = env.play(pcont=best_sol)
 
-        # Evaluate the best solution by passing it to the environment for testing
-        f, p, e, t = env.play(pcont=best_sol)
-
-        # Print the evaluation results (fitness, player life, enemy life, time taken)
-        print(f"Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}")
+            # Print the evaluation results (fitness, player life, enemy life, time taken)
+            print(f"Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {p - e}")
 
         sys.exit(0)  # Exit after testing the best solution
 
