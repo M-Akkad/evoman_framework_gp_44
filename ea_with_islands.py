@@ -29,11 +29,9 @@ if not os.path.exists(experiment_name):
 
 n_hidden_neurons = 10
 
-
-
 # initializes simulation in individual evolution mode, for single static enemy.
 env = Environment(experiment_name=experiment_name,
-                  enemies=[6],
+                  enemies=[1],
                   playermode="ai",
                   player_controller=player_controller(n_hidden_neurons),
                   enemymode="static",
@@ -44,22 +42,22 @@ env = Environment(experiment_name=experiment_name,
 # genetic algorithm params
 n_vars = (env.get_num_sensors() + 1) * n_hidden_neurons + (n_hidden_neurons + 1) * 5
 
-run_mode = 'train'
+run_mode = 'test'
 
 dom_u = 1
 dom_l = -1
 npop = 100
 gens = 50
-mutation_weight = 0.1
+mutation_weight = 0.3
 n_parents = 2
 k = 3  # Tournament size
 num_offspring = 50
 
 # Island Model parameters
 num_islands = 5  # Number of islands
-migration_interval = 25  # Migrate every 25 generations
+migration_interval = 10  # Migrate every 10 generations
 migration_size = 3  # Number of individuals to migrate
-mutation_rate = 0.2
+mutation_rate = 0.1
 
 
 # Evaluate fitness
@@ -82,9 +80,9 @@ def tournament_selection(population, fitness_scores, k):
     return selected_parents
 
 
-
 def select_parents(population, fitness_scores, k=3):
     return tournament_selection(population, fitness_scores, k)
+
 
 # Multi-parent recombination type 2
 def multi_parent_recombination(parents):
@@ -103,7 +101,8 @@ def mutate(child, mutation_rate, mutation_weight):
 
 
 # Evolution of a single population (island)
-def evolve_single_population(population, fitness_scores, mutation_rate, num_offspring=50, mutation_weight=0.1, k=3, n_parents=2):
+def evolve_single_population(population, fitness_scores, mutation_rate, num_offspring=50, mutation_weight=0.1, k=3,
+                             n_parents=2):
     offspring = []
     selected_parents = select_parents(population, fitness_scores, k)
     for _ in range(num_offspring):
@@ -128,14 +127,14 @@ def evolve_single_population(population, fitness_scores, mutation_rate, num_offs
 def migrate(populations, fitness_scores_list, migration_size):
     for i in range(num_islands):
         source_island = i
-        target_island = (i + 1) % num_islands  
+        target_island = (i + 1) % num_islands
 
         combined = list(zip(populations[source_island], fitness_scores_list[source_island]))
         combined.sort(key=lambda x: x[1], reverse=True)
         migrants = [ind for ind, fit in combined[:migration_size]]
 
         combined_target = list(zip(populations[target_island], fitness_scores_list[target_island]))
-        combined_target.sort(key=lambda x: x[1])  
+        combined_target.sort(key=lambda x: x[1])
         for j in range(migration_size):
             populations[target_island][j] = migrants[j]
             fitness_scores_list[target_island][j] = fitness_scores_list[source_island][j]

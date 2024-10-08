@@ -13,7 +13,7 @@ from demo_controller import player_controller
 # imports other libs
 import time
 import numpy as np
-from math import fabs,sqrt
+from math import fabs, sqrt
 import glob, os
 
 # ATTENTION: To train change headless to true, visuals(within env) to false and run_mode to train job
@@ -23,14 +23,11 @@ headless = False
 if headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
 
-
 experiment_name = 'team1_test'
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 
 n_hidden_neurons = 10
-
-
 
 # initializes simulation in individual evolution mode, for single static enemy.
 env = Environment(experiment_name=experiment_name,
@@ -44,29 +41,27 @@ env = Environment(experiment_name=experiment_name,
 
 # default environment fitness is assumed for experiment
 
-env.state_to_log() # checks environment state
-
+env.state_to_log()  # checks environment state
 
 ####   Optimization for controller solution (best genotype-weights for phenotype-network): Ganetic Algorihm    ###
 
 ini = time.time()  # sets time marker
 
-
 # genetic algorithm params
 
 
 # number of weights for multilayer with 10 hidden neurons
-n_vars = (env.get_num_sensors()+1)*n_hidden_neurons + (n_hidden_neurons+1)*5
+n_vars = (env.get_num_sensors() + 1) * n_hidden_neurons + (n_hidden_neurons + 1) * 5
 
-run_mode = 'test' # train or test
+run_mode = 'test'  # train or test
 dom_u = 1
 dom_l = -1
 npop = 100
 gens = 50
 mutation_rate = 0.1
-mutation_weight = 0.1
-n_parents = 3
-k = 3 # Tournament size
+mutation_weight = 0.3
+n_parents = 2
+k = 3  # Tournament size
 num_offspring = 50
 last_best = 0
 
@@ -90,19 +85,21 @@ def tournament_selection(population, fitness_scores, k):
         selected_parents.append(population[winner_index])
     return selected_parents
 
+
 # Selection
 def select_parents(population, fitness_scores, k=3):
     selected_parents = tournament_selection(population, fitness_scores, k)
     return selected_parents
 
+
 # Multi-parent recombination
 def multi_parent_recombination(parents):
     child = np.zeros(n_vars)
     for i in range(n_vars):
-        selected_parent = np.random.choice(range(len(parents)))
-        child[i] = parents[selected_parent][i]
-    
+        child[i] = np.mean([parent[i] for parent in parents])
     return child
+
+
 
 # Mutation
 def mutate(child, mutation_rate, mutation_weight):
@@ -112,34 +109,35 @@ def mutate(child, mutation_rate, mutation_weight):
     return child
 
 
-
 # Evolution loop
-def evolve_population(population, fitness_scores, num_offspring=50, mutation_rate=0.1, mutation_weight=0.1, k=3, n_parents=2):
+def evolve_population(population, fitness_scores, num_offspring=50, mutation_rate=0.1, mutation_weight=0.1, k=3,
+                      n_parents=2):
     # Generate offspring using multi-parent recombination and mutation
     offspring = []
     selected_parents = select_parents(population, fitness_scores, k)
     for _ in range(num_offspring):
         # Randomly select n_parents without replacement
         parent_indices = np.random.choice(len(selected_parents), n_parents, replace=False)
-        
+
         # Collect the selected parents based on the random indices
         parents = [selected_parents[i] for i in parent_indices]
 
         child = multi_parent_recombination(parents)
         mutated_child = mutate(child, mutation_rate, mutation_weight)
         offspring.append(mutated_child)
-    
+
     # Combine population with offspring and re-evaluate
     new_population = population + offspring
     new_fitness_scores = evaluate_population(new_population)
-    
+
     # Select the top `npop` individuals for the next generation
     combined = list(zip(new_population, new_fitness_scores))
     combined.sort(key=lambda x: x[1], reverse=True)  # Sort by fitness (higher is better)
     population = [ind for ind, fitness in combined[:npop]]
     fitness_scores = [fitness for ind, fitness in combined[:npop]]
-    
+
     return population, fitness_scores
+
 
 # Main loop
 if run_mode == 'train':
@@ -195,7 +193,8 @@ if run_mode == 'train':
     best_old = 0
     for generation in range(ini_g, gens):
         print(f"\nEvolving Generation {generation}")
-        population, fitness_scores = evolve_population(population, fitness_scores, num_offspring, mutation_rate, mutation_weight, k, n_parents)
+        population, fitness_scores = evolve_population(population, fitness_scores, num_offspring, mutation_rate,
+                                                       mutation_weight, k, n_parents)
 
         # Update best, mean, std after evolving
         best = np.argmax(fitness_scores)
@@ -210,13 +209,10 @@ if run_mode == 'train':
         # Save the best individual for this generation
         best_individual = population[best]
         np.save(f"{experiment_name}/best_individual_gen_{generation}.npy", best_individual)
-        
-        
+
         if best_old < fitness_scores[best]:
             best_old = fitness_scores[best]
             np.savetxt(experiment_name + '/best.txt', best_individual)
-
-
 
         # Save the current state
         solutions = [population, fitness_scores]
