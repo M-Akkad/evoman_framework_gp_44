@@ -217,10 +217,10 @@ if run_mode == 'train':
 
 # Test the best solution
 elif run_mode == 'test':
-   
+
     try:
         # Load the best solution from the file
-        best_sol = np.loadtxt('/Users/s.broos/Documents/EVO/evoman_framework_gp_44/team2_test_run_10/final_overall_best.txt')
+        best_sol = f"{experiment_name}/final_overall_best.txt"
         print('\n RUNNING SAVED BEST SOLUTION \n')
 
         # Set the speed to normal for testing (you may adjust this)
