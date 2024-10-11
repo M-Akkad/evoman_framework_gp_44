@@ -215,4 +215,16 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+/.idea/evoman_framework_gp_44.iml
+/dummy_demo/evoman_logs.txt
+/test/evoman_logs.txt
 /.idea/misc.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/group_assigment.iml
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/evoman_solves_all_gpu/
+/own_exp.py
+/test.ipynb
