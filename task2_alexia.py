@@ -24,18 +24,20 @@ headless = True
 if headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
 
-experiment_name = 'task2_alexia'
+experiment_name = 'Basic_EA_with_Islands'
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 
 n_hidden_neurons = 10
 
 # Initializes simulation in individual evolution mode, for multiple enemies.
-enemies = [1, 2, 3]  # Specify multiple enemies to train on
+enemies = [1, 2, 3, 7]  # group 1
+# enemies = [4, 5, 6, 8] #group 2
 
 env = Environment(experiment_name=experiment_name,
                   enemies=enemies,
                   playermode="ai",
+                  multiplemode="yes",
                   player_controller=player_controller(n_hidden_neurons),
                   enemymode="static",
                   level=2,
@@ -65,7 +67,12 @@ mutation_weight = 0.3
 n_parents = 2
 k = 3  # Tournament size
 num_offspring = 50
-last_best = 0
+
+# Island Model parameters
+num_islands = 4  # Number of islands
+migration_interval = 10  # Migrate every 10 generations
+migration_size = 3  # Number of individuals to migrate
+
 
 # Define a null output context to suppress prints and error outputs
 class NullOutput:
@@ -75,10 +82,12 @@ class NullOutput:
     def flush(self):
         pass
 
+
 # Update parameter without logging messages
 def update_parameter_silently(env, param, value):
     with contextlib.redirect_stdout(NullOutput()), contextlib.redirect_stderr(NullOutput()):
         env.update_parameter(param, value)
+
 
 # Evaluate fitness
 def evaluate_population(population):
@@ -89,8 +98,9 @@ def evaluate_population(population):
             update_parameter_silently(env, 'enemies', [enemy])  # Set the current enemy silently
             f, p, e, t = env.play(pcont=individual)
             total_fitness += f
-        fitness_scores.append(total_fitness / len(enemies)) 
+        fitness_scores.append(total_fitness / len(enemies))
     return fitness_scores
+
 
 # Tournament selection
 def tournament_selection(population, fitness_scores, k):
@@ -102,10 +112,12 @@ def tournament_selection(population, fitness_scores, k):
         selected_parents.append(population[winner_index])
     return selected_parents
 
+
 # Selection
 def select_parents(population, fitness_scores, k=3):
     selected_parents = tournament_selection(population, fitness_scores, k)
     return selected_parents
+
 
 # Multi-parent recombination type 2
 def multi_parent_recombination(parents):
@@ -114,6 +126,7 @@ def multi_parent_recombination(parents):
         child[i] = np.mean([parent[i] for parent in parents])
     return child
 
+
 # Mutation
 def mutate(child, mutation_rate, mutation_weight):
     for i in range(n_vars):
@@ -121,33 +134,47 @@ def mutate(child, mutation_rate, mutation_weight):
             child[i] += np.random.uniform((-1 * mutation_weight), mutation_weight)
     return child
 
+
+def migrate(populations, fitness_scores_list, migration_size):
+    for i in range(num_islands):
+        source_island = i
+        target_island = (i + 1) % num_islands
+
+        combined = list(zip(populations[source_island], fitness_scores_list[source_island]))
+        combined.sort(key=lambda x: x[1], reverse=True)
+        migrants = [ind for ind, fit in combined[:migration_size]]
+
+        combined_target = list(zip(populations[target_island], fitness_scores_list[target_island]))
+        combined_target.sort(key=lambda x: x[1])
+        for j in range(migration_size):
+            populations[target_island][j] = migrants[j]
+            fitness_scores_list[target_island][j] = fitness_scores_list[source_island][j]
+
+    return populations, fitness_scores_list
+
+
 # Evolution loop
-def evolve_population(population, fitness_scores, num_offspring=50, mutation_rate=0.1, mutation_weight=0.1, k=3, n_parents=2):
-    # Generate offspring using multi-parent recombination and mutation
+def evolve_population(population, fitness_scores, mutation_rate, num_offspring=50, mutation_weight=0.1, k=3,
+                      n_parents=2):
     offspring = []
     selected_parents = select_parents(population, fitness_scores, k)
     for _ in range(num_offspring):
-        # Randomly select n_parents without replacement
         parent_indices = np.random.choice(len(selected_parents), n_parents, replace=False)
-
-        # Collect the selected parents based on the random indices
         parents = [selected_parents[i] for i in parent_indices]
-
         child = multi_parent_recombination(parents)
         mutated_child = mutate(child, mutation_rate, mutation_weight)
         offspring.append(mutated_child)
 
-    # Combine population with offspring and re-evaluate
     new_population = population + offspring
     new_fitness_scores = evaluate_population(new_population)
 
-    # Select the top `npop` individuals for the next generation
     combined = list(zip(new_population, new_fitness_scores))
-    combined.sort(key=lambda x: x[1], reverse=True)  # Sort by fitness (higher is better)
+    combined.sort(key=lambda x: x[1], reverse=True)
     population = [ind for ind, fitness in combined[:npop]]
     fitness_scores = [fitness for ind, fitness in combined[:npop]]
 
     return population, fitness_scores
+
 
 # Main loop
 if run_mode == 'train':
@@ -159,7 +186,7 @@ if run_mode == 'train':
         print(f"\nStarting Run {run}...\n")
 
         # Create a unique folder for each run
-        experiment_name = f'task2_alexia_run_{run}'
+        experiment_name = f'EA2_gr1_2_run_num_{run}'
         if not os.path.exists(experiment_name):
             os.makedirs(experiment_name)
 
@@ -176,22 +203,40 @@ if run_mode == 'train':
         env.state_to_log()  # Log environment state
 
         # Initialize the genetic algorithm variables
-        population = [np.random.uniform(dom_l, dom_u, n_vars) for _ in range(npop)]
-        fitness_scores = evaluate_population(population)
+        populations = [
+            [np.random.uniform(dom_l, dom_u, n_vars) for _ in range(npop)]
+            for _ in range(num_islands)
+        ]
+        fitness_scores_list = [evaluate_population(population) for population in populations]
         overall_best_individual = None
         overall_best_fitness = -float('inf')
 
         # Evolutionary process
         avg_fitness_per_generation = []  # Track average fitness per generation
-        best_old = 0
         for generation in range(gens):
             print(f"\nEvolving Generation {generation} for Run {run}")
-            population, fitness_scores = evolve_population(population, fitness_scores, num_offspring, mutation_rate, mutation_weight, k, n_parents)
 
-            # Evaluate best individual of the current generation for each enemy
-            best_idx = np.argmax(fitness_scores)
-            best_individual = population[best_idx]
-            best_fitness = fitness_scores[best_idx]
+            for i in range(num_islands):
+                populations[i], fitness_scores_list[i] = evolve_population(
+                    populations[i],
+                    fitness_scores_list[i],
+                    mutation_rate,
+                    num_offspring,
+                    mutation_weight,
+                    k,
+                    n_parents
+                )
+
+            if generation % migration_interval == 0:
+                print("  Migration between islands")
+                populations, fitness_scores_list = migrate(populations, fitness_scores_list, migration_size)
+
+            # Find best individual across all islands
+            all_fitness = [fitness for fitness_scores in fitness_scores_list for fitness in fitness_scores]
+            all_individuals = [ind for population in populations for ind in population]
+            best_idx = np.argmax(all_fitness)
+            best_individual = all_individuals[best_idx]
+            best_fitness = all_fitness[best_idx]
 
             # Save the best individual of the current generation
             np.savetxt(f"{experiment_name}/best_individual_generation_{generation}.txt", best_individual)
@@ -199,7 +244,7 @@ if run_mode == 'train':
                 best_file.write(f"Generation {generation}: Best Fitness: {best_fitness}\n")
 
             # Calculate and save the average fitness for the current generation
-            avg_fitness = np.mean(fitness_scores)
+            avg_fitness = np.mean(all_fitness)
             avg_fitness_per_generation.append(avg_fitness)
             with open(f"{experiment_name}/average_fitness_per_generation.txt", 'a') as avg_file:
                 avg_file.write(f"Generation {generation}: Average Fitness: {avg_fitness}\n")
@@ -212,8 +257,10 @@ if run_mode == 'train':
 
                 # Save the best individual's evaluation metrics for each enemy
                 with open(f"{experiment_name}/best_individual_enemy_{enemy}_results.txt", 'a') as file_aux:
-                    print(f' GENERATION {generation} Best for Enemy {enemy}: Fitness: {round(f_best, 6)}, Player Life: {p_best}, Enemy Life: {e_best}, Time: {t_best}, Gain: {gain_best}')
-                    file_aux.write(f'\nGeneration {generation} - Best Individual for Enemy {enemy}: Fitness: {round(f_best, 6)}, Player Life: {p_best}, Enemy Life: {e_best}, Time: {t_best}, Gain: {gain_best}')
+                    print(
+                        f' GENERATION {generation} Best for Enemy {enemy}: Fitness: {round(f_best, 6)}, Player Life: {p_best}, Enemy Life: {e_best}, Time: {t_best}, Gain: {gain_best}')
+                    file_aux.write(
+                        f'\nGeneration {generation} - Best Individual for Enemy {enemy}: Fitness: {round(f_best, 6)}, Player Life: {p_best}, Enemy Life: {e_best}, Time: {t_best}, Gain: {gain_best}')
 
             # Track the overall best individual and fitness for this run
             if best_fitness > overall_best_fitness:
@@ -235,7 +282,10 @@ elif run_mode == 'test':
 
     try:
         # Load the best solution from the file
-        best_sol = np.loadtxt('/Users/s.broos/Documents/EVO/evoman_framework_gp_44/task2_run_1/final_overall_best.txt')
+
+        file_path = f"{experiment_name}/final_overall_best.txt"
+        best_sol = np.loadtxt(file_path)
+
         print('\n RUNNING SAVED BEST SOLUTION \n')
 
         # Set the speed to normal for testing (you may adjust this)
@@ -251,9 +301,10 @@ elif run_mode == 'test':
 
                 # Print the evaluation results (fitness, player life, enemy life, time taken)
                 gain = p - e
-                print(f"Enemy {enemy} - Test Run {i+1}: Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}")
+                print(
+                    f"Enemy {enemy} - Test Run {i + 1}: Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}")
 
-        sys.exit(0)  # Exit after testing the best solution
+        sys.exit(0)
 
     except Exception as e:
         print(f"Error loading best solution: {e}")
