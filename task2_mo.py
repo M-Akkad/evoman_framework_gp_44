@@ -208,7 +208,7 @@ def migrate(islands, fitness_scores):
 
 # Main loop
 if run_mode == 'train':
-    num_runs = 1
+    num_runs = 10
 
     for run in range(1, num_runs + 1):
         print(f"\nStarting Run {run}...\n")
@@ -352,6 +352,6 @@ elif run_mode == 'test':
         print(f"An error occurred: {e}")
 
 # Created/Modified files during execution:
-print("\nFiles created during testing:")
-for focus in focus_types:
-    print(f"test_results_final_best_{focus}.txt")
+# print("\nFiles created during testing:")
+# for focus in focus_types:
+#     print(f"test_results_final_best_{focus}.txt")
