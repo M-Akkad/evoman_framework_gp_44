@@ -19,7 +19,7 @@ import contextlib
 # ATTENTION: To train change headless to true, visuals(within env) to false and run_mode to train job
 
 # choose this for not using visuals and thus making experiments faster
-headless = False
+headless = True
 if headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
 
@@ -42,7 +42,7 @@ env = Environment(experiment_name=experiment_name,
                   level=2,
                   randomini="no",
                   speed="fastest",
-                  visuals=True)
+                  visuals=False)
 
 # default environment fitness is assumed for experiment
 env.state_to_log()  # checks environment state
@@ -233,8 +233,7 @@ if run_mode == 'train':
             [np.random.uniform(dom_l, dom_u, n_vars) for _ in range(npop)] for _ in range(num_islands)
         ]
 
-        fitness_funcs = [fitness_main, fitness_player_life(), fitness_enemy_life(), fitness_time()]
-
+        fitness_funcs = [fitness_main, fitness_player_life, fitness_enemy_life, fitness_time]
         fitness_scores = [
             evaluate_population_island(islands[i], fitness_funcs[i]) for i in range(num_islands)
         ]
