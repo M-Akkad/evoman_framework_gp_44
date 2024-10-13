@@ -180,7 +180,7 @@ def evolve_population(population, fitness_scores, mutation_rate, num_offspring=5
 if run_mode == 'train':
 
     # Number of runs
-    num_runs = 1
+    num_runs = 10
 
     for run in range(1, num_runs + 1):
         print(f"\nStarting Run {run}...\n")
