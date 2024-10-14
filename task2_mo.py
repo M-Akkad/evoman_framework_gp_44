@@ -30,8 +30,8 @@ if not os.path.exists(experiment_name):
 n_hidden_neurons = 10
 
 # Initializes simulation in individual evolution mode, for multiple enemies.
-enemies = [1, 2, 3, 7]  # group 1
-# enemies = [4, 5, 6, 8] #group 2
+# enemies = [1, 2, 3, 7]  # group 1
+enemies = [4, 5, 6, 8] #group 2
 
 env = Environment(experiment_name=experiment_name,
                   enemies=enemies,
@@ -213,7 +213,7 @@ if run_mode == 'train':
     for run in range(1, num_runs + 1):
         print(f"\nStarting Run {run}...\n")
 
-        experiment_name = f'EA1_gr1_1_run_num_{run}'
+        experiment_name = f'EA1_gr2_run_num_{run}'
         if not os.path.exists(experiment_name):
             os.makedirs(experiment_name)
 
