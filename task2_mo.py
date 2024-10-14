@@ -19,29 +19,30 @@ import contextlib
 # ATTENTION: To train change headless to true, visuals(within env) to false and run_mode to train job
 
 # choose this for not using visuals and thus making experiments faster
-headless = False
+headless = True
 if headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
 
-experiment_name = 'task2_mo'
+experiment_name = 'EA_islands_with_advanced_features'
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 
 n_hidden_neurons = 10
 
 # Initializes simulation in individual evolution mode, for multiple enemies.
-enemies = [1, 2, 3]  # Specify multiple enemies to train on
+enemies = [1, 2, 3, 7]  # group 1
+# enemies = [4, 5, 6, 8] #group 2
 
 env = Environment(experiment_name=experiment_name,
                   enemies=enemies,
                   playermode="ai",
-                  # multiplemode="yes",
+                  multiplemode="yes",
                   player_controller=player_controller(n_hidden_neurons),
                   enemymode="static",
                   level=2,
                   randomini="no",
                   speed="fastest",
-                  visuals=True)
+                  visuals=False)
 
 # default environment fitness is assumed for experiment
 env.state_to_log()  # checks environment state
@@ -55,7 +56,7 @@ ini = time.time()  # sets time marker
 # number of weights for multilayer with 10 hidden neurons
 n_vars = (env.get_num_sensors() + 1) * n_hidden_neurons + (n_hidden_neurons + 1) * 5
 
-run_mode = 'test'  # train or test
+run_mode = 'train'  # train or test
 dom_u = 1
 dom_l = -1
 npop = 100
@@ -65,7 +66,6 @@ mutation_weight = 0.3
 n_parents = 2
 k = 3  # Tournament size
 num_offspring = 50
-last_best = 0
 
 # Island Model parameters
 num_islands = 4  # Number of islands
@@ -94,15 +94,15 @@ def fitness_main(f, p, e, t):
 
 
 def fitness_player_life(f, p, e, t):
-    return p
+    return 0.45 * (100 - e) + 0.2 * p - 0.5 * np.log(t)
 
 
 def fitness_enemy_life(f, p, e, t):
-    return -e  # Negative because we want to minimize enemy life
+    return 1.8 * (100 - e) + 0.05 * p - 0.5 * np.log(t)
 
 
 def fitness_time(f, p, e, t):
-    return -t  # Negative because we want to minimize time
+    return 0.45 * (100 - e) + 0.05 * p - 2 * np.log(t)
 
 
 # Evaluate fitness for a specific island
@@ -176,28 +176,44 @@ def evolve_island(population, fitness_scores, fitness_func, num_offspring=50, mu
 
 # Migration between islands
 def migrate(islands, fitness_scores):
-    for i in range(num_islands):
-        emigrants = []
+    main_island = islands[0]
+    main_fitness = fitness_scores[0]
+
+    for i in range(1, num_islands):
+        # Migrate from focus island to main island
+        emigrants_to_main = []
         for _ in range(migration_size):
             idx = np.random.randint(len(islands[i]))
-            emigrants.append(islands[i].pop(idx))
+            emigrants_to_main.append(islands[i].pop(idx))
             fitness_scores[i].pop(idx)
 
-        next_island = (i + 1) % num_islands
-        islands[next_island].extend(emigrants)
-        fitness_scores[next_island].extend(evaluate_population_island(emigrants, fitness_funcs[next_island]))
+        main_island.extend(emigrants_to_main)
+        main_fitness.extend(evaluate_population_island(emigrants_to_main, fitness_funcs[0]))
+
+        # Migrate from main island to focus island
+        emigrants_from_main = []
+        for _ in range(migration_size):
+            idx = np.random.randint(len(main_island))
+            emigrants_from_main.append(main_island.pop(idx))
+            main_fitness.pop(idx)
+
+        islands[i].extend(emigrants_from_main)
+        fitness_scores[i].extend(evaluate_population_island(emigrants_from_main, fitness_funcs[i]))
+
+    islands[0] = main_island
+    fitness_scores[0] = main_fitness
 
     return islands, fitness_scores
 
 
 # Main loop
 if run_mode == 'train':
-    num_runs = 1
+    num_runs = 10
 
     for run in range(1, num_runs + 1):
         print(f"\nStarting Run {run}...\n")
 
-        experiment_name = f'task2_mo_run_{run}'
+        experiment_name = f'EA1_gr1_1_run_num_{run}'
         if not os.path.exists(experiment_name):
             os.makedirs(experiment_name)
 
@@ -216,6 +232,7 @@ if run_mode == 'train':
         islands = [
             [np.random.uniform(dom_l, dom_u, n_vars) for _ in range(npop)] for _ in range(num_islands)
         ]
+
         fitness_funcs = [fitness_main, fitness_player_life, fitness_enemy_life, fitness_time]
         fitness_scores = [
             evaluate_population_island(islands[i], fitness_funcs[i]) for i in range(num_islands)
@@ -278,56 +295,54 @@ if run_mode == 'train':
     print(f"\nAll {num_runs} runs completed.")
 
 
-# Test the best solution for each focus (p, e, t)
+# Test the best solution for each focus (main, p, e, t)
 elif run_mode == 'test':
     try:
         print('\nTESTING BEST INDIVIDUALS FOR EACH FITNESS FOCUS\n')
         experiment_name = "task2_mo_run_1"
 
-        # Load the final overall best individual
-        final_best_path = f"{experiment_name}/final_overall_best.txt"
-        if not os.path.exists(final_best_path):
-            raise FileNotFoundError("Final overall best individual file not found.")
+        # Load the final overall best individuals for each focus
+        focus_types = ['main', 'p', 'e', 't']
+        best_individuals = {}
 
-        final_best_individual = np.loadtxt(final_best_path)
+        for focus in focus_types:
+            file_path = f"{experiment_name}/final_overall_best_{focus}.txt"
+            if not os.path.exists(file_path):
+                raise FileNotFoundError(f"Final overall best individual file for {focus} focus not found.")
+            best_individuals[focus] = np.loadtxt(file_path)
 
-        print('\nRUNNING TESTS ON FINAL OVERALL BEST INDIVIDUAL\n')
+        # Initialize dictionary to store test results
+        test_results = {focus: [] for focus in focus_types}
 
-        # Loop through each fitness focus ('overall', 'p', 'e', 't') to evaluate
-        for focus in ['overall', 'p', 'e', 't']:
-            print(f"\nEvaluating fitness focus: '{focus}'\n")
+        # Test each best individual against all enemies
+        for focus, individual in best_individuals.items():
+            print(f"\nTesting best individual for {focus} focus")
 
-            # Initialize list for storing test results per focus
-            test_results = []
-
-            # Evaluate each enemy separately
             for enemy in enemies:
                 update_parameter_silently(env, 'enemies', [enemy])
 
                 # Perform multiple test runs for consistency
-                for i in range(1):
-                    f, p, e, t = env.play(pcont=final_best_individual)
+                for i in range(5):  # 5 test runs per enemy
+                    f, p, e, t = env.play(pcont=individual)
+                    gain = p - e
 
-                    # Calculate relevant fitness metric based on the focus
-                    if focus == 'overall':
-                        fitness = f
-                    elif focus == 'p':  # Focus on Player Health
-                        fitness = p
-                    elif focus == 'e':  # Focus on Enemy Health (minimization)
-                        fitness = -e
-                    elif focus == 't':  # Focus on Time (minimization)
-                        fitness = -t
-
-                    # Store and print test results
-                    test_results.append((enemy, fitness, f, p, e, t))
+                    test_results[focus].append((enemy, f, p, e, t, gain))
                     print(
-                        f"Enemy {enemy} - Test Run {i + 1}: Focus Fitness: {fitness}, Overall Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}")
+                        f"Enemy {enemy} - Test Run {i + 1}: Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}")
 
-            # Save test results for this focus
-            test_results_path = f"{experiment_name}/test_results_final_best_focus_{focus}.txt"
-            np.savetxt(test_results_path, test_results, fmt='%d %.2f %.2f %d %d %.2f',
-                       header='Enemy FocusFitness OverallFitness PlayerLife EnemyLife Time')
-            print(f"Test results saved for Final Best Individual, Focus {focus} at {test_results_path}")
+        # Save test results for each focus
+        for focus, results in test_results.items():
+            test_results_path = f"{experiment_name}/test_results_final_best_{focus}.txt"
+            np.savetxt(test_results_path, results, fmt='%d %.2f %d %d %.2f %.2f',
+                       header='Enemy Fitness PlayerLife EnemyLife Time Gain')
+            print(f"Test results saved for {focus} focus at {test_results_path}")
+
+        # Calculate and print average gain for each focus
+        print("\nAverage Gains:")
+        for focus, results in test_results.items():
+            gains = [r[5] for r in results]
+            avg_gain = np.mean(gains)
+            print(f"{focus.capitalize()} focus average gain: {avg_gain:.2f}")
 
         print('\nAll tests completed.')
 
@@ -337,5 +352,6 @@ elif run_mode == 'test':
         print(f"An error occurred: {e}")
 
 # Created/Modified files during execution:
-print("\nFiles created during testing:")
-print("test_results_final_best_focus_[FocusType].txt")
+# print("\nFiles created during testing:")
+# for focus in focus_types:
+#     print(f"test_results_final_best_{focus}.txt")
