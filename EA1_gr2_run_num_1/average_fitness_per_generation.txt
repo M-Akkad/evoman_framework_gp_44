@@ -1,0 +1,6 @@
+Generation 0: Average Fitness: 0.9715987151917622
+Generation 1: Average Fitness: 0.9715987151917622
+Generation 2: Average Fitness: 0.9715987151917622
+Generation 3: Average Fitness: 0.9715987151917622
+Generation 4: Average Fitness: 0.9715987151917622
+Generation 5: Average Fitness: 0.9715987151917622

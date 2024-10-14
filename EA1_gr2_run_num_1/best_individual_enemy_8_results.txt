@@ -1,0 +1,7 @@
+
+Generation 0 - Best Individual for Enemy 8: Fitness: 87.057882, Player Life: 28.600000000000257, Enemy Life: 0, Time: 331, Gain: 28.600000000000257
+Generation 1 - Best Individual for Enemy 8: Fitness: 87.057882, Player Life: 28.600000000000257, Enemy Life: 0, Time: 331, Gain: 28.600000000000257
+Generation 2 - Best Individual for Enemy 8: Fitness: 87.057882, Player Life: 28.600000000000257, Enemy Life: 0, Time: 331, Gain: 28.600000000000257
+Generation 3 - Best Individual for Enemy 8: Fitness: 87.057882, Player Life: 28.600000000000257, Enemy Life: 0, Time: 331, Gain: 28.600000000000257
+Generation 4 - Best Individual for Enemy 8: Fitness: 87.057882, Player Life: 28.600000000000257, Enemy Life: 0, Time: 331, Gain: 28.600000000000257
+Generation 5 - Best Individual for Enemy 8: Fitness: 87.057882, Player Life: 28.600000000000257, Enemy Life: 0, Time: 331, Gain: 28.600000000000257
