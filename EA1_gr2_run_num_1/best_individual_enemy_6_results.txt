@@ -1,0 +1,7 @@
+
+Generation 0 - Best Individual for Enemy 6: Fitness: 30.553263, Player Life: 0, Enemy Life: 60.0, Time: 232, Gain: -60.0
+Generation 1 - Best Individual for Enemy 6: Fitness: 30.553263, Player Life: 0, Enemy Life: 60.0, Time: 232, Gain: -60.0
+Generation 2 - Best Individual for Enemy 6: Fitness: 30.553263, Player Life: 0, Enemy Life: 60.0, Time: 232, Gain: -60.0
+Generation 3 - Best Individual for Enemy 6: Fitness: 30.553263, Player Life: 0, Enemy Life: 60.0, Time: 232, Gain: -60.0
+Generation 4 - Best Individual for Enemy 6: Fitness: 30.553263, Player Life: 0, Enemy Life: 60.0, Time: 232, Gain: -60.0
+Generation 5 - Best Individual for Enemy 6: Fitness: 30.553263, Player Life: 0, Enemy Life: 60.0, Time: 232, Gain: -60.0
