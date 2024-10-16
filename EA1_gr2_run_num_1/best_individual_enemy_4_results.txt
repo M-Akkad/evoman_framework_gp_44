@@ -1,7 +1,0 @@
-
-Generation 0 - Best Individual for Enemy 4: Fitness: 30.597323, Player Life: 0, Enemy Life: 60.0, Time: 222, Gain: -60.0
-Generation 1 - Best Individual for Enemy 4: Fitness: 30.597323, Player Life: 0, Enemy Life: 60.0, Time: 222, Gain: -60.0
-Generation 2 - Best Individual for Enemy 4: Fitness: 30.597323, Player Life: 0, Enemy Life: 60.0, Time: 222, Gain: -60.0
-Generation 3 - Best Individual for Enemy 4: Fitness: 30.597323, Player Life: 0, Enemy Life: 60.0, Time: 222, Gain: -60.0
-Generation 4 - Best Individual for Enemy 4: Fitness: 30.597323, Player Life: 0, Enemy Life: 60.0, Time: 222, Gain: -60.0
-Generation 5 - Best Individual for Enemy 4: Fitness: 30.597323, Player Life: 0, Enemy Life: 60.0, Time: 222, Gain: -60.0

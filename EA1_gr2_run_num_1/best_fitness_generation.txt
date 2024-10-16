@@ -1,6 +1,0 @@
-Generation 0: Best Fitness: 59.28843887287064
-Generation 1: Best Fitness: 59.28843887287064
-Generation 2: Best Fitness: 59.28843887287064
-Generation 3: Best Fitness: 59.28843887287064
-Generation 4: Best Fitness: 59.28843887287064
-Generation 5: Best Fitness: 59.28843887287064
