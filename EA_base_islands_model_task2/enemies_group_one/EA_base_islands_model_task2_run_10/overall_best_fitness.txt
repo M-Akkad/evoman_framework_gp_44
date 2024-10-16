@@ -1,0 +1,6 @@
+Generation 152: Overall Best Fitness: 177.56247091222218
+Overall Best Per-Enemy Fitness:
+Enemy 1: 94.78506424239102
+Enemy 2: 91.44704041507838
+Enemy 3: 85.96755198344948
+Enemy 7: 94.18001907417188

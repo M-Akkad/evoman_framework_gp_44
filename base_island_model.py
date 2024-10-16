@@ -27,8 +27,8 @@ n_hidden_neurons = 10
 
 # Specify multiple enemies to train on
 
-enemies = [1, 2, 3, 7]  # group 1
-# enemies = [4, 5, 6, 8] #group 2
+# enemies = [1, 2, 3, 7]  # group 1
+enemies = [4, 5, 6, 8] #group 2
 
 env = Environment(experiment_name=experiment_name,
                   enemies=enemies,

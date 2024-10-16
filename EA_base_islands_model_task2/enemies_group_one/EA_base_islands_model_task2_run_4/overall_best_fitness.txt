@@ -1,0 +1,6 @@
+Generation 99: Overall Best Fitness: 163.92728247796433
+Overall Best Per-Enemy Fitness:
+Enemy 1: 94.85250552318655
+Enemy 2: 92.73193985886488
+Enemy 3: 91.82364909070206
+Enemy 7: 75.26020708782076
