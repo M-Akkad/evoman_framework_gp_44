@@ -1,0 +1,6 @@
+Generation 54: Overall Best Fitness: 163.97468124713964
+Overall Best Per-Enemy Fitness:
+Enemy 1: 94.78506424239102
+Enemy 2: 91.49061166337202
+Enemy 3: 91.5911868145574
+Enemy 7: 75.60637245364764

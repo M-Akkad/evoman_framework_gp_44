@@ -26,8 +26,8 @@ n_hidden_neurons = 10
 
 # Specify multiple enemies to train on
 
-enemies = [1, 2, 3, 7]  # group 1
-# enemies = [4, 5, 6, 8] #group 2
+# enemies = [1, 2, 3, 7]  # group 1
+enemies = [4, 5, 6, 8] #group 2
 
 env = Environment(experiment_name=experiment_name,
                   enemies=enemies,
@@ -71,7 +71,7 @@ migration_rate = 0.1  # Proportion of individuals to migrate
 num_runs = 10
 
 # Run mode: 'train' or 'test'
-run_mode = 'train'  # Change to 'test' as needed
+run_mode = 'test'  # Change to 'test' as needed
 
 
 class NullOutput:
@@ -323,6 +323,8 @@ if run_mode == 'train':
         print(f"\nRun {run} completed in {generation} generations.\n")
 
     print(f"\nAll {num_runs} runs completed.")
+
+
 
 elif run_mode == 'test':
 
