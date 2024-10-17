@@ -18,7 +18,7 @@ headless = True
 if headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
 
-experiment_name = 'island_ea_task_2'
+experiment_name = 'island_ea_task2'
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 

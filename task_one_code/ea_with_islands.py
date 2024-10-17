@@ -55,7 +55,7 @@ k = 3  # Tournament size
 num_offspring = 50
 
 # Island Model parameters
-num_islands = 5  # Number of islands
+num_islands = 4  # Number of islands
 migration_interval = 10  # Migrate every 10 generations
 migration_size = 3  # Number of individuals to migrate
 mutation_rate = 0.1
