@@ -1,6 +1,0 @@
-Generation 87: Overall Best Fitness: 145.93508156457239
-Overall Best Per-Enemy Fitness:
-Enemy 4: 65.73469878726229
-Enemy 5: 90.52405089685372
-Enemy 6: 75.19185751001956
-Enemy 8: 89.35092391510481

@@ -1,6 +1,0 @@
-Generation 9: Overall Best Fitness: 123.42335307775187
-Overall Best Per-Enemy Fitness:
-Enemy 1: 57.269900217026425
-Enemy 2: 75.20698639161586
-Enemy 3: 65.88631782016776
-Enemy 7: 66.25060701409174

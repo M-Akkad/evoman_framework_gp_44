@@ -1,0 +1,6 @@
+Generation 81: Overall Best Fitness: 162.96826067933608
+Overall Best Per-Enemy Fitness:
+Enemy 1: 94.78506424239102
+Enemy 2: 92.29061166337202
+Enemy 3: 89.64090461150806
+Enemy 7: 75.03129244001464
