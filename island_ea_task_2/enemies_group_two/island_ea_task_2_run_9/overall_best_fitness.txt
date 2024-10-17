@@ -1,0 +1,6 @@
+Generation 35: Overall Best Fitness: 147.4858360554055
+Overall Best Per-Enemy Fitness:
+Enemy 4: 65.79746448281207
+Enemy 5: 89.59419793370404
+Enemy 6: 84.30394224923465
+Enemy 8: 87.05788162462296

@@ -1,0 +1,6 @@
+Generation 41: Overall Best Fitness: 179.59017729384215
+Overall Best Per-Enemy Fitness:
+Enemy 1: 94.85250552318655
+Enemy 2: 91.49061166337202
+Enemy 3: 87.81585110906252
+Enemy 7: 92.93833644349735

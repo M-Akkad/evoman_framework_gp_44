@@ -1,0 +1,6 @@
+Generation 15: Overall Best Fitness: 145.78781040605412
+Overall Best Per-Enemy Fitness:
+Enemy 4: 74.70289068006606
+Enemy 5: 90.34027017401381
+Enemy 6: 66.21003982910274
+Enemy 8: 87.05788162462296
