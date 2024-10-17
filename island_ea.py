@@ -18,7 +18,7 @@ headless = True
 if headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
 
-experiment_name = 'EA_islands_with_advanced_features_task_2'
+experiment_name = 'island_ea_task_2'
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 
@@ -27,7 +27,7 @@ n_hidden_neurons = 10
 # Specify multiple enemies to train on
 
 # enemies = [1, 2, 3, 7]  # group 1
-enemies = [4, 5, 6, 8] #group 2
+enemies = [4, 5, 6, 8]  # group 2
 
 env = Environment(experiment_name=experiment_name,
                   enemies=enemies,
@@ -324,30 +324,58 @@ if run_mode == 'train':
 
     print(f"\nAll {num_runs} runs completed.")
 
-
-
 elif run_mode == 'test':
 
     try:
-        best_sol = np.loadtxt(f'{experiment_name}/final_overall_best.txt')
-        print('\n RUNNING SAVED BEST SOLUTION \n')
+        best_individuals = []
 
-        update_parameter_silently(env, 'speed', 'normal')
+        # Iterate through each run
+        for run in range(1, num_runs + 1):
+            best_fitness_run = -float('inf')
+            best_sol_run = None
+            best_group_run = None
 
-        for enemy in enemies:
-            update_parameter_silently(env, 'enemies', [enemy])
+            for enemy_group in ['enemies_group_one', 'enemies_group_two']:
+                run_fitness_file = f'{experiment_name}/{enemy_group}/{experiment_name}_run_{run}/final_overall_best_fitness.txt'
+                if os.path.exists(run_fitness_file):
+                    with open(run_fitness_file, 'r') as file:
+                        first_line = file.readline()
+                        try:
+                            fitness_value = float(first_line.split(':')[-1].strip())
+                        except ValueError:
+                            continue
+                        if fitness_value > best_fitness_run:
+                            best_fitness_run = fitness_value
+                            best_sol_run = np.loadtxt(
+                                f'{experiment_name}/{enemy_group}/{experiment_name}_run_{run}/final_overall_best.txt')
+                            best_group_run = enemy_group
 
-            fitnesses = []
-            for i in range(5):
-                f, p, e, t = env.play(pcont=best_sol)
-                gain = p - e
-                fitnesses.append(f)
-                print(
-                    f"Enemy {enemy} - Test Run {i + 1}: Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}")
+            if best_sol_run is not None:
+                best_individuals.append((best_group_run, run, best_fitness_run, best_sol_run))
 
-            avg_fitness = np.mean(fitnesses)
-            print(f"Average Fitness against Enemy {enemy}: {avg_fitness}")
+        if len(best_individuals) == 0:
+            raise ValueError("No valid best solutions found across runs.")
 
+        results_file = f"{experiment_name}/all_best_individuals_gain_results_for_island.txt"
+        with open(results_file, 'w') as res_file:
+            res_file.write("Enemy, Run, Enemy_Group, Fitness, Player_Life, Enemy_Life, Time, Gain\n")
+
+            for (enemy_group, run, fitness_value, best_sol) in best_individuals:
+                print(f'\n RUNNING BEST INDIVIDUAL FROM {enemy_group} RUN {run} WITH FITNESS {fitness_value} \n')
+
+                update_parameter_silently(env, 'speed', 'fastest')
+
+                for enemy in range(1, 9):
+                    update_parameter_silently(env, 'enemies', [enemy])
+                    f, p, e, t = env.play(pcont=best_sol)
+                    gain = p - e
+                    print(
+                        f"Enemy {enemy} - Run {run} from {enemy_group}: Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}")
+
+                    res_file.write(
+                        f"Enemy {enemy}, Run {run}, Enemy Group {enemy_group}, Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}\n")
+
+        print(f"\nTesting completed. Results saved to {results_file}\n")
         sys.exit(0)
 
     except Exception as e:
