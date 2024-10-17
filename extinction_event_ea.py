@@ -173,6 +173,24 @@ if run_mode == 'train':
     for run in range(1, num_runs + 1):
         print(f"\nStarting Run {run}...\n")
 
+        # Save hyperparameters to a config file
+        hyperparameters = {
+            'initial_mutation_rate': initial_mutation_rate,
+            'elitism_rate': elitism_rate,
+            'growth_rate': growth_rate,
+            # Fixed hyperparameters
+            'initial_pop_size': initial_pop_size,
+            'min_pop_size': min_pop_size,
+            'max_pop_size': max_pop_size,
+            'min_k': min_k,
+            'max_k': max_k,
+            'initial_mutation_weight': initial_mutation_weight,
+            'final_mutation_weight': final_mutation_weight,
+            'final_mutation_rate': final_mutation_rate,
+            'disaster_exponent': disaster_exponent,
+            'max_generations': max_generations
+        }
+
         current_pop_size = initial_pop_size
 
         experiment_name_run = f'{experiment_name}_run_{run}'
@@ -262,6 +280,18 @@ if run_mode == 'train':
                     best_file.write("Overall Best Per-Enemy Fitness:\n")
                     for enemy, fitness in zip(enemies, overall_best_per_enemy_fitness):
                         best_file.write(f"Enemy {enemy}: {fitness}\n")
+
+            # Save average fitness
+            avg_fitness = np.mean(fitness_scores)
+            with open(f"{experiment_name_run}/average_fitness_per_generation.txt", 'a') as avg_file:
+                avg_file.write(f"Generation {generation}: Average Fitness: {avg_fitness}\n")
+
+            # Save per-enemy average fitness
+            avg_per_enemy_fitness = np.mean(per_enemy_fitness, axis=0)
+            with open(f"{experiment_name_run}/average_per_enemy_fitness_generation.txt", 'a') as avg_enemy_file:
+                avg_enemy_file.write(f"Generation {generation}: Average Per-Enemy Fitness:\n")
+                for enemy, fitness in zip(enemies, avg_per_enemy_fitness):
+                    avg_enemy_file.write(f"Enemy {enemy}: {fitness}\n")
 
             print(
                 f"Best Fitness: {best_fitness}, Overall Best Fitness: {overall_best_fitness}")

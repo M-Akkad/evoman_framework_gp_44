@@ -1,0 +1,6 @@
+Generation 84: Overall Best Fitness: 155.70505003424734
+Overall Best Per-Enemy Fitness:
+Enemy 4: 74.717733253104
+Enemy 5: 89.77419793370404
+Enemy 6: 75.11112204166712
+Enemy 8: 84.34621389609809

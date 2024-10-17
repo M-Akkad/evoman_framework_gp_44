@@ -1,0 +1,6 @@
+Generation 23: Overall Best Fitness: 142.13291833431668
+Overall Best Per-Enemy Fitness:
+Enemy 4: 65.84090461150807
+Enemy 5: 88.82157804100166
+Enemy 6: 66.1593583426266
+Enemy 8: 84.34621389609809

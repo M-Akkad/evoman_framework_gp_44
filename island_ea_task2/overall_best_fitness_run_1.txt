@@ -1,6 +1,0 @@
-Generation 5: Overall Best Fitness: 111.72574009664118
-Overall Best Per-Enemy Fitness:
-Enemy 4: 39.31982739098293
-Enemy 5: 87.95636882440192
-Enemy 6: 75.28957298262513
-Enemy 8: 87.05788162462296

@@ -1,0 +1,6 @@
+Generation 77: Overall Best Fitness: 159.47271613233
+Overall Best Per-Enemy Fitness:
+Enemy 4: 74.69921420533676
+Enemy 5: 90.52405089685372
+Enemy 6: 84.33105438238982
+Enemy 8: 89.53968822339262

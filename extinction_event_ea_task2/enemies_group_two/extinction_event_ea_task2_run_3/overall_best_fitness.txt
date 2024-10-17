@@ -1,0 +1,6 @@
+Generation 68: Overall Best Fitness: 156.09815334418272
+Overall Best Per-Enemy Fitness:
+Enemy 4: 74.70289068006606
+Enemy 5: 88.70528862039819
+Enemy 6: 74.32670203223235
+Enemy 8: 89.35092391510481

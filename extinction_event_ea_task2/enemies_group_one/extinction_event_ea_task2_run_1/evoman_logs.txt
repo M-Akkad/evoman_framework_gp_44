@@ -51727,3 +51727,3515 @@ PARAMETER CHANGE: enemies = [2]
 PARAMETER CHANGE: enemies = [3]
 
 PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
+
+PARAMETER CHANGE: enemies = [1]
+
+PARAMETER CHANGE: enemies = [2]
+
+PARAMETER CHANGE: enemies = [3]
+
+PARAMETER CHANGE: enemies = [7]
