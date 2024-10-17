@@ -1,0 +1,6 @@
+Overall Best Fitness: 155.8409282134147
+Overall Best Per-Enemy Fitness:
+Enemy 4: 74.70289068006606
+Enemy 5: 90.46405089685372
+Enemy 6: 75.03899466037673
+Enemy 8: 84.34621389609809

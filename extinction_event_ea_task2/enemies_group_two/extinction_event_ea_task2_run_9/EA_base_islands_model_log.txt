@@ -1,0 +1,8 @@
+EA_base_islands_model at Generation 7, Population reduced to 20
+EA_base_islands_model at Generation 24, Population reduced to 20
+EA_base_islands_model at Generation 44, Population reduced to 20
+EA_base_islands_model at Generation 61, Population reduced to 20
+EA_base_islands_model at Generation 81, Population reduced to 20
+EA_base_islands_model at Generation 100, Population reduced to 20
+EA_base_islands_model at Generation 114, Population reduced to 20
+EA_base_islands_model at Generation 132, Population reduced to 20

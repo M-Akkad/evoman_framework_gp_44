@@ -1,0 +1,6 @@
+Generation 14: Overall Best Fitness: 145.67966085115938
+Overall Best Per-Enemy Fitness:
+Enemy 4: 74.70105075314406
+Enemy 5: 89.89419793370404
+Enemy 6: 66.21310261863329
+Enemy 8: 87.05788162462296

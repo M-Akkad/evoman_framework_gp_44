@@ -1,0 +1,6 @@
+Generation 39: Overall Best Fitness: 159.2181505200893
+Overall Best Per-Enemy Fitness:
+Enemy 4: 86.2963713718616
+Enemy 5: 91.42586946817495
+Enemy 6: 74.73469878726229
+Enemy 8: 85.47686730400923

@@ -1,0 +1,6 @@
+Generation 11: Overall Best Fitness: 144.3876269987449
+Overall Best Per-Enemy Fitness:
+Enemy 4: 74.36274196871554
+Enemy 5: 65.71214143983822
+Enemy 6: 83.64737060368043
+Enemy 8: 90.97968822339261

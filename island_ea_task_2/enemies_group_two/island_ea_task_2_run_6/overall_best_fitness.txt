@@ -1,0 +1,6 @@
+Generation 20: Overall Best Fitness: 146.33752717708586
+Overall Best Per-Enemy Fitness:
+Enemy 4: 73.71038947854883
+Enemy 5: 92.37193985886489
+Enemy 6: 65.6684981501063
+Enemy 8: 90.9252886203982
