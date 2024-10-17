@@ -1,3 +1,0 @@
-EA_base_islands_model at Generation 10, Population reduced to 20
-EA_base_islands_model at Generation 30, Population reduced to 20
-EA_base_islands_model at Generation 50, Population reduced to 20

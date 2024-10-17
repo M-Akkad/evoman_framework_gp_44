@@ -49,12 +49,11 @@ dom_u = 1
 dom_l = -1
 
 # Fixed hyperparameters
-population_size = 200  # Total population size
+population_size = 66  # Total population size
 n_parents = 2  # Number of parents for crossover
 elitism_rate = 0.1  # Proportion of top individuals to carry over
 tournament_k = 3  # Tournament size for selection
-max_generations = 1000  # Maximum number of generations
-patience = 50  # Early stopping patience
+max_generations = 100
 
 # Dynamic mutation parameters
 initial_mutation_rate = 0.1560  # Starting mutation rate
@@ -71,7 +70,7 @@ migration_rate = 0.1  # Proportion of individuals to migrate
 num_runs = 10
 
 # Run mode: 'train' or 'test'
-run_mode = 'test'  # Change to 'test' as needed
+run_mode = 'train'  # Change to 'test' as needed
 
 
 class NullOutput:
@@ -176,52 +175,20 @@ if run_mode == 'train':
     for run in range(1, num_runs + 1):
         print(f"\nStarting Run {run}...\n")
 
-        # Save hyperparameters to a config file
-        hyperparameters = {
-            'initial_mutation_rate': initial_mutation_rate,
-            'final_mutation_rate': final_mutation_rate,
-            'initial_mutation_weight': initial_mutation_weight,
-            'final_mutation_weight': final_mutation_weight,
-            'elitism_rate': elitism_rate,
-            'patience': patience,
-            'tournament_k': tournament_k,
-            'num_islands': num_islands,
-            'migration_interval': migration_interval,
-            'migration_rate': migration_rate,
-            # Fixed hyperparameters
-            'population_size': population_size,
-            'n_parents': n_parents,
-            'max_generations': max_generations
-        }
-
-        experiment_name_run = f'{experiment_name}_run_{run}'
-        if not os.path.exists(experiment_name_run):
-            os.makedirs(experiment_name_run)
-
-        # Save hyperparameters to a text file
-        with open(f"{experiment_name_run}/hyperparameters.txt", 'w') as hp_file:
-            for key, value in hyperparameters.items():
-                hp_file.write(f"{key}: {value}\n")
-
         # Initialize islands
-        island_pop_size = population_size // num_islands
         islands = []
         for i in range(num_islands):
-            island_population = [np.random.uniform(dom_l, dom_u, n_vars) for _ in range(island_pop_size)]
+            island_population = [np.random.uniform(dom_l, dom_u, n_vars) for _ in range(population_size)]
             islands.append(island_population)
 
         overall_best_individual = None
         overall_best_fitness = -float('inf')
         overall_best_per_enemy_fitness = None
 
-        generation = 0
-        generations_without_improvement = 0
+        # Initialize log file for best individual stats
+        best_individuals_log = open(f"{experiment_name}/best_individuals_per_generation_run_{run}.txt", 'w')
 
-        # Lists to store average fitness per generation
-        avg_fitness_per_generation = []
-        avg_per_enemy_fitness_per_generation = []
-
-        while generations_without_improvement < patience and generation < max_generations:
+        for generation in range(max_generations):
             print(f"\nGeneration {generation} for Run {run}")
 
             # Adjust mutation rate and weight dynamically
@@ -266,16 +233,13 @@ if run_mode == 'train':
                     overall_best_fitness = best_fitness
                     overall_best_individual = best_individual
                     overall_best_per_enemy_fitness = best_per_enemy_fitness
-                    generations_without_improvement = 0
                     # Save the overall best individual so far
-                    np.savetxt(f"{experiment_name_run}/overall_best_individual.txt", overall_best_individual)
-                    with open(f"{experiment_name_run}/overall_best_fitness.txt", 'w') as best_file:
+                    np.savetxt(f"{experiment_name}/overall_best_individual_run_{run}.txt", overall_best_individual)
+                    with open(f"{experiment_name}/overall_best_fitness_run_{run}.txt", 'w') as best_file:
                         best_file.write(f"Generation {generation}: Overall Best Fitness: {overall_best_fitness}\n")
                         best_file.write("Overall Best Per-Enemy Fitness:\n")
                         for enemy, fitness in zip(enemies, overall_best_per_enemy_fitness):
                             best_file.write(f"Enemy {enemy}: {fitness}\n")
-                else:
-                    generations_without_improvement += 1
 
                 print(f"    Best Fitness on Island {idx + 1}: {best_fitness}")
 
@@ -288,29 +252,20 @@ if run_mode == 'train':
                 print("  Migration occurring...")
                 islands = migrate(islands, migration_rate)
 
-            # Save average fitness across all islands
-            avg_fitness = np.mean(total_fitness_scores)
-            avg_fitness_per_generation.append(avg_fitness)
-            with open(f"{experiment_name_run}/average_fitness_per_generation.txt", 'a') as avg_file:
-                avg_file.write(f"Generation {generation}: Average Fitness: {avg_fitness}\n")
-
-            # Save per-enemy average fitness
-            avg_per_enemy_fitness = np.mean(total_per_enemy_fitness, axis=0)
-            avg_per_enemy_fitness_per_generation.append(avg_per_enemy_fitness)
-            with open(f"{experiment_name_run}/average_per_enemy_fitness_generation.txt", 'a') as avg_enemy_file:
-                avg_enemy_file.write(f"Generation {generation}: Average Per-Enemy Fitness:\n")
-                for enemy, fitness in zip(enemies, avg_per_enemy_fitness):
-                    avg_enemy_file.write(f"Enemy {enemy}: {fitness}\n")
+            # Log the best individual of this generation
+            best_individuals_log.write(
+                f"Generation {generation}: Best Fitness: {overall_best_fitness}, Per-Enemy Fitness: {overall_best_per_enemy_fitness}\n")
 
             print(
-                f"Overall Best Fitness so far: {overall_best_fitness}, Generations without Improvement: {generations_without_improvement}")
+                f"Overall Best Fitness so far: {overall_best_fitness}")
             print(f"Current Mutation Rate: {current_mutation_rate:.4f}, Mutation Weight: {current_mutation_weight:.4f}")
 
-            generation += 1
+        # Close log file for best individuals
+        best_individuals_log.close()
 
         if overall_best_individual is not None:
-            np.savetxt(f"{experiment_name_run}/final_overall_best.txt", overall_best_individual)
-            with open(f"{experiment_name_run}/final_overall_best_fitness.txt", 'w') as final_best_file:
+            np.savetxt(f"{experiment_name}/final_overall_best_run_{run}.txt", overall_best_individual)
+            with open(f"{experiment_name}/final_overall_best_fitness_run_{run}.txt", 'w') as final_best_file:
                 final_best_file.write(f"Overall Best Fitness: {overall_best_fitness}\n")
                 final_best_file.write("Overall Best Per-Enemy Fitness:\n")
                 for enemy, fitness in zip(enemies, overall_best_per_enemy_fitness):
@@ -320,7 +275,7 @@ if run_mode == 'train':
             for enemy, fitness in zip(enemies, overall_best_per_enemy_fitness):
                 print(f"  Enemy {enemy}: {fitness}")
 
-        print(f"\nRun {run} completed in {generation} generations.\n")
+        print(f"\nRun {run} completed in {max_generations} generations.\n")
 
     print(f"\nAll {num_runs} runs completed.")
 

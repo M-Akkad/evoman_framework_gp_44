@@ -1,6 +1,0 @@
-Generation 65: Overall Best Fitness: 143.22080930795713
-Overall Best Per-Enemy Fitness:
-Enemy 4: 65.83879267830493
-Enemy 5: 90.34027017401381
-Enemy 6: 66.11112204166712
-Enemy 8: 87.23788162462296

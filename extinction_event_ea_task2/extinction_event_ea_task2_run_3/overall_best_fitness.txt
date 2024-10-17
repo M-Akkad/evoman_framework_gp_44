@@ -1,0 +1,6 @@
+Generation 95: Overall Best Fitness: 163.63109720753073
+Overall Best Per-Enemy Fitness:
+Enemy 1: 94.78506424239102
+Enemy 2: 91.49061166337202
+Enemy 3: 91.93157441175589
+Enemy 7: 75.2634277025208
