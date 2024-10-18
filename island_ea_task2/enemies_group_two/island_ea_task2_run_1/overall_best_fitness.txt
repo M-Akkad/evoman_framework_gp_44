@@ -1,0 +1,6 @@
+Generation 86: Overall Best Fitness: 157.1885197123091
+Overall Best Per-Enemy Fitness:
+Enemy 4: 74.68283531325271
+Enemy 5: 90.68353644806852
+Enemy 6: 75.11667761151172
+Enemy 8: 89.53968822339262

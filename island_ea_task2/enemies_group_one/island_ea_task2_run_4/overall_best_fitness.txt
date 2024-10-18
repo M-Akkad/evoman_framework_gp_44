@@ -1,0 +1,6 @@
+Generation 88: Overall Best Fitness: 185.34657312135175
+Overall Best Per-Enemy Fitness:
+Enemy 1: 94.78506424239102
+Enemy 2: 92.53193985886487
+Enemy 3: 92.22619038813075
+Enemy 7: 92.93833644349735

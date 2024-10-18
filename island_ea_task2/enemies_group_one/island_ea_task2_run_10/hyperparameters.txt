@@ -1,0 +1,12 @@
+initial_mutation_rate: 0.156
+final_mutation_rate: 0.05
+initial_mutation_weight: 0.5
+final_mutation_weight: 0.1
+elitism_rate: 0.1
+tournament_k: 3
+num_islands: 4
+migration_interval: 10
+migration_rate: 0.1
+population_size: 68
+n_parents: 2
+max_generations: 100

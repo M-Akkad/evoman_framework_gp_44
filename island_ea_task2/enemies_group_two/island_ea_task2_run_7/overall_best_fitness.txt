@@ -1,0 +1,6 @@
+Generation 75: Overall Best Fitness: 156.42327470106903
+Overall Best Per-Enemy Fitness:
+Enemy 4: 74.73850831567896
+Enemy 5: 89.72957298262516
+Enemy 6: 75.21310261863329
+Enemy 8: 87.05788162462296

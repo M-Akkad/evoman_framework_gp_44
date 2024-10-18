@@ -1,0 +1,6 @@
+Generation 97: Overall Best Fitness: 171.18246996781107
+Overall Best Per-Enemy Fitness:
+Enemy 4: 83.81020626248761
+Enemy 5: 90.6557442025855
+Enemy 6: 85.4779150932834
+Enemy 8: 89.54518926293743

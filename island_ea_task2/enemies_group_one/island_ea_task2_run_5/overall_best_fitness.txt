@@ -1,0 +1,6 @@
+Generation 70: Overall Best Fitness: 164.23432557742512
+Overall Best Per-Enemy Fitness:
+Enemy 1: 94.78506424239102
+Enemy 2: 91.93703951986404
+Enemy 3: 91.85457939139343
+Enemy 7: 75.67212383121041

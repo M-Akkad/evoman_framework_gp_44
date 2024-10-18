@@ -1,0 +1,6 @@
+Generation 85: Overall Best Fitness: 184.12616443741243
+Overall Best Per-Enemy Fitness:
+Enemy 1: 94.78506424239102
+Enemy 2: 92.09061166337202
+Enemy 3: 91.36212908007786
+Enemy 7: 92.81833644349736

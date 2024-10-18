@@ -1,0 +1,6 @@
+Generation 74: Overall Best Fitness: 171.8908374960117
+Overall Best Per-Enemy Fitness:
+Enemy 4: 85.39962616327607
+Enemy 5: 92.77504998251861
+Enemy 6: 83.6249751801719
+Enemy 8: 91.26379793739258
