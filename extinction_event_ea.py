@@ -71,7 +71,7 @@ growth_rate = 1.1362
 num_runs = 10
 
 # Run mode: 'train' or 'test'
-run_mode = 'train'
+run_mode = 'test'
 
 
 class NullOutput:
@@ -319,19 +319,13 @@ if run_mode == 'train':
 
     print(f"\nAll {num_runs} runs completed.")
 
-
 elif run_mode == 'test':
 
     try:
         best_individuals = []
 
-        # Iterate through each run
-        for run in range(1, num_runs + 1):
-            best_fitness_run = -float('inf')
-            best_sol_run = None
-            best_group_run = None
-
-            for enemy_group in ['enemies_group_one', 'enemies_group_two']:
+        for enemy_group in ['enemies_group_one', 'enemies_group_two']:
+            for run in range(1, num_runs + 1):
                 run_fitness_file = f'{experiment_name}/{enemy_group}/{experiment_name}_run_{run}/final_overall_best_fitness.txt'
                 if os.path.exists(run_fitness_file):
                     with open(run_fitness_file, 'r') as file:
@@ -340,38 +334,42 @@ elif run_mode == 'test':
                             fitness_value = float(first_line.split(':')[-1].strip())
                         except ValueError:
                             continue
-                        if fitness_value > best_fitness_run:
-                            best_fitness_run = fitness_value
-                            best_sol_run = np.loadtxt(
-                                f'{experiment_name}/{enemy_group}/{experiment_name}_run_{run}/final_overall_best.txt')
-                            best_group_run = enemy_group
-
-            if best_sol_run is not None:
-                best_individuals.append((best_group_run, run, best_fitness_run, best_sol_run))
+                        best_sol = np.loadtxt(
+                            f'{experiment_name}/{enemy_group}/{experiment_name}_run_{run}/final_overall_best.txt')
+                        best_individuals.append((enemy_group, run, fitness_value, best_sol))
 
         if len(best_individuals) == 0:
             raise ValueError("No valid best solutions found across runs.")
 
-        results_file = f"{experiment_name}/all_best_individuals_gain_results_for_extinction.txt"
-        with open(results_file, 'w') as res_file:
-            res_file.write("Enemy, Run, Enemy_Group, Fitness, Player_Life, Enemy_Life, Time, Gain\n")
+        results_file_group_one = f"{experiment_name}/group_one_best_results.txt"
+        results_file_group_two = f"{experiment_name}/group_two_best_results.txt"
+
+        with open(results_file_group_one, 'w') as res_file_one, open(results_file_group_two, 'w') as res_file_two:
+            res_file_one.write("Enemy, Run, Enemy_Group, Fitness, Player_Life, Enemy_Life, Time, Gain\n")
+            res_file_two.write("Enemy, Run, Enemy_Group, Fitness, Player_Life, Enemy_Life, Time, Gain\n")
 
             for (enemy_group, run, fitness_value, best_sol) in best_individuals:
                 print(f'\n RUNNING BEST INDIVIDUAL FROM {enemy_group} RUN {run} WITH FITNESS {fitness_value} \n')
 
                 update_parameter_silently(env, 'speed', 'fastest')
 
-                for enemy in range(1, 9):
+                for enemy in range(1, 9):  # Enemies 1 to 8
                     update_parameter_silently(env, 'enemies', [enemy])
-                    f, p, e, t = env.play(pcont=best_sol)
-                    gain = p - e
-                    print(
-                        f"Enemy {enemy} - Run {run} from {enemy_group}: Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}")
 
-                    res_file.write(
-                        f"Enemy {enemy}, Run {run}, Enemy Group {enemy_group}, Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}\n")
+                    for test_run in range(1, 11):  # Repeat 10 times for each enemy
+                        f, p, e, t = env.play(pcont=best_sol)
+                        gain = p - e
+                        print(
+                            f"Enemy {enemy} - Test Run {test_run}, Run {run} from {enemy_group}: Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}")
 
-        print(f"\nTesting completed. Results saved to {results_file}\n")
+                        if enemy_group == 'enemies_group_one':
+                            res_file_one.write(
+                                f"Enemy {enemy}, Test Run {test_run}, Run {run}, Enemy Group {enemy_group}, Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}\n")
+                        elif enemy_group == 'enemies_group_two':
+                            res_file_two.write(
+                                f"Enemy {enemy}, Test Run {test_run}, Run {run}, Enemy Group {enemy_group}, Fitness: {f}, Player Life: {p}, Enemy Life: {e}, Time: {t}, Gain: {gain}\n")
+
+        print(f"\nTesting completed. Results saved to {results_file_group_one} and {results_file_group_two}\n")
         sys.exit(0)
 
     except Exception as e:
