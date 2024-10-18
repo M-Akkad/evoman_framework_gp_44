@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
+from scipy import stats
+
 
 # Function to read the average_fitness_per_generation.txt file and extract generation and mean fitness
 def read_results(file_path):
@@ -78,14 +80,13 @@ def pad_sequences(seq_list, max_len):
 	return [np.pad(seq, (0, max_len - len(seq)), constant_values=np.nan) for seq in list(seq_list)]
 
 
-# Function to plot mean and max fitness with standard deviation clouds for multiple experiments
+# function to plot mean and max fitness with standard deviation clouds for multiple experiments
 def plot_evolution_with_std_cloud(num_runs, experiment_folder_base, label_prefix, color_mean, color_max, run_prefix):
 	all_mean_fitness = []
 	all_max_fitness = []
 	max_generations = 0
 
 	for run in range(1, num_runs + 1):
-		# Use the correct run prefix for each experiment (EA 1 or EA 2)
 		experiment_name = f"{experiment_folder_base}/{run_prefix}_run_{run}"
 		results_file = os.path.join(experiment_name, 'average_fitness_per_generation.txt')
 		max_file = os.path.join(experiment_name, 'best_individuals_per_generation.txt')
@@ -127,6 +128,8 @@ def plot_evolution_with_std_cloud(num_runs, experiment_folder_base, label_prefix
 	                 mean_max_fitness + std_max_fitness,
 	                 color=color_max, alpha=0.2)
 
+	return [mean_avg_fitness, mean_max_fitness]
+
 
 # Main plot setup
 num_runs = 10  # Adjust based on the number of runs
@@ -135,15 +138,19 @@ plt.figure(figsize=(10, 6))
 
 # Plot for Evolutionary Algorithm 1 (No Island Evolution)
 print("Processing EA 1 (extinction_event_ea_task2)")
-plot_evolution_with_std_cloud(num_runs, experiment_folder_base='extinction_event_ea_task2/enemies_group_two',
-                              label_prefix="Extinction Event EA", color_mean='skyblue', color_max='blue',
-                              run_prefix="extinction_event_ea_task2")
+[ea1_mean_fitness, ea1_max_fitness] = plot_evolution_with_std_cloud(num_runs,
+                                                                    experiment_folder_base='extinction_event_ea_task2/enemies_group_two',
+                                                                    label_prefix="Extinction Event EA",
+                                                                    color_mean='skyblue', color_max='blue',
+                                                                    run_prefix="extinction_event_ea_task2")
 
 # Plot for Evolutionary Algorithm 2 (Island Evolution)
 print("Processing EA 2 (island_ea_task2)")
-plot_evolution_with_std_cloud(num_runs, experiment_folder_base='island_ea_task2/enemies_group_two',
-                              label_prefix="Island EA", color_mean='red', color_max='darkred',
-                              run_prefix="island_ea_task2")
+[ea2_mean_fitness, ea2_max_fitness] = plot_evolution_with_std_cloud(num_runs,
+                                                                    experiment_folder_base='island_ea_task2/enemies_group_two',
+                                                                    label_prefix="Island EA", color_mean='darkred',
+                                                                    color_max='orange',
+                                                                    run_prefix="island_ea_task2")
 
 # Adding labels, title, and legend
 plt.xlabel('Generation', fontsize=16, fontweight='bold')
@@ -155,6 +162,11 @@ plt.legend(loc='lower right', fontsize=12)
 
 # Add grid
 plt.grid(True)
+
+print("T-test enemy group 1, Mean Fitness EA1-EA2: ",
+      stats.ttest_ind(ea1_mean_fitness, ea2_mean_fitness))  # mean comparison
+print("T-test enemy group 1, Max Fitness EA1-EA2: ",
+      stats.ttest_ind(ea1_max_fitness, ea2_max_fitness))  # max comparison
 
 # Show the plot once for both EAs
 plt.tight_layout()

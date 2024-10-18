@@ -50,17 +50,21 @@ if df_1.empty or df_2.empty or df_3.empty or df_4.empty:
     print("No valid data found for plotting.")
 else:
     # Gain values from all groups
-    group_one = df_1['Gain']
-    group_two = df_2['Gain']
-    group_three = df_3['Gain']
-    group_four = df_4['Gain']
+    ea1_gr1 = df_1['Gain']
+    ea1_gr2 = df_2['Gain']
+    ea2_gr1 = df_3['Gain']
+    ea2_gr2 = df_4['Gain']
 
     # Perform t-tests between the same enemy groups in different EAs
-    t_stat_1, p_val_1 = stats.ttest_ind(group_one, group_three)  # Group 1 comparison
-    t_stat_2, p_val_2 = stats.ttest_ind(group_two, group_four)   # Group 2 comparison
+    t_stat_1, p_val_1 = stats.ttest_ind(ea1_gr1, ea2_gr1)  # Group 1 comparison
+    t_stat_2, p_val_2 = stats.ttest_ind(ea1_gr2, ea2_gr2)   # Group 2 comparison
 
-    print("T-test enemy group 1: ", stats.ttest_ind(group_one, group_three))
-    print("T-test enemy group 2: ", stats.ttest_ind(group_two, group_four))
+    print("T-test enemy group 1: ", stats.ttest_ind(ea1_gr1, ea2_gr1))
+    print("T-test enemy group 2: ", stats.ttest_ind(ea1_gr2, ea2_gr2))
+
+    # not sure if relevant
+    print("T-test EA1 between groups: ", stats.ttest_ind(ea1_gr1, ea1_gr2))
+    print("T-test EA2 between groups: ", stats.ttest_ind(ea2_gr1, ea2_gr2))
 
     # Create the boxplot with custom colors for the groups
     plt.figure(figsize=(10, 6))
@@ -68,17 +72,17 @@ else:
     boxprops_2 = dict(facecolor='lightgreen', color='black')  # Second color
 
     # Plotting each group separately to apply different colors
-    plt.boxplot(group_one, positions=[1], patch_artist=True, showmeans=True, boxprops=boxprops_1)
-    plt.boxplot(group_two, positions=[3], patch_artist=True, showmeans=True, boxprops=boxprops_2)
-    plt.boxplot(group_three, positions=[2], patch_artist=True, showmeans=True, boxprops=boxprops_1)
-    plt.boxplot(group_four, positions=[4], patch_artist=True, showmeans=True, boxprops=boxprops_2)
+    plt.boxplot(ea1_gr1, positions=[1], patch_artist=True, showmeans=True, boxprops=boxprops_1)
+    plt.boxplot(ea1_gr2, positions=[3], patch_artist=True, showmeans=True, boxprops=boxprops_2)
+    plt.boxplot(ea2_gr1, positions=[2], patch_artist=True, showmeans=True, boxprops=boxprops_1)
+    plt.boxplot(ea2_gr2, positions=[4], patch_artist=True, showmeans=True, boxprops=boxprops_2)
 
     # x-tick labels for the pairs
-    plt.xticks([1.5, 3.5], ['Extinction Event EA', 'Island EA'], fontsize=12)
+    plt.xticks([1, 2, 3, 4], ['Extinction Event EA', 'Island EA','Extinction Event EA','Island EA'], fontsize=12)
 
     # Add p-values as text on the plot
-    plt.text(1.5, min(group_one.min(), group_three.min()) - 5, f'p = {p_val_1:.3f}', ha='center', fontsize=12)
-    plt.text(3.5, min(group_two.min(), group_four.min()) - 5, f'p = {p_val_2:.3f}', ha='center', fontsize=12)
+    plt.text(1.5, min(ea1_gr1.min(), ea2_gr1.min()) - 5, f'p = {p_val_1:.3f}', ha='center', fontsize=12)
+    plt.text(3.5, min(ea1_gr2.min(), ea2_gr2.min()) - 5, f'p = {p_val_2:.3f}', ha='center', fontsize=12)
 
     # Legend for color differentiation
     plt.legend([plt.Line2D([0], [0], color='skyblue', lw=4),
