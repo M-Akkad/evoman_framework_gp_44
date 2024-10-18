@@ -141,7 +141,7 @@ plot_evolution_with_std_cloud(num_runs, experiment_folder_base='extinction_event
 # Plot for Evolutionary Algorithm 2 (Island Evolution)
 print("Processing EA 2 (island_ea_task2)")
 plot_evolution_with_std_cloud(num_runs, experiment_folder_base='island_ea_task2/enemies_group_one',
-                              label_prefix="Island EA", color_mean='red', color_max='darkred',
+                              label_prefix="Island EA", color_mean='red', color_max='magenta',
                               run_prefix="island_ea_task2")
 
 # Adding labels, title, and legend

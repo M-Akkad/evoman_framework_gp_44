@@ -1,77 +1,88 @@
 from pprint import pprint
-
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from pprint import pprint
 
+import sns
 
-# Function to read gain data from the provided file
+
 def read_gain_data(file_path):
-	data = {'Run': [], 'Gain': [], 'Enemy_Group': []}
+	data = {'Gain': []}
 
 	with open(file_path, 'r') as f:
 		lines = f.readlines()
 		for idx, line in enumerate(lines):
-			# Skip the header line
+			# skip the header line
 			if idx == 0:
 				print(f"Skipping header: {line.strip()}")
 				continue
 
-			# print(f"Processing line {idx}: {line.strip()}")  # Print each line for debugging
-
+			# remove whitespace and split by commas
 			parts = line.strip().split(", ")
-			# print(f"Parsed parts: {parts}")  # Print the parsed parts of the line
 
 			try:
-				# Ensure line has the expected format (at least 8 parts)
 				if len(parts) >= 8:
-					run_part = parts[1].split(" ")
-					run = int(run_part[1].strip())  # Extract run number
-					gain_part = parts[-1].split(": ")
-					gain = float(gain_part[1].strip())  # Extract gain value
-					enemy_group_part = parts[2].split(" ")[2].strip()  # Extract enemy group
-					# print(f"Run: {run}, Gain: {gain}, Enemy Group: {enemy_group_part}")  # Debug output
-
-					data['Run'].append(run)
+					# extract the run number (assuming 'Run x')
+					gain_part = parts[8].split(" ")  # split by space
+					gain = float(gain_part[1].strip())  # converted to integer
 					data['Gain'].append(gain)
-					data['Enemy_Group'].append(enemy_group_part)
 				else:
 					print(f"Line skipped, not enough parts: {parts}")
+
 			except (IndexError, ValueError) as e:
 				print(f"Error processing line: {line}. Error: {e}")
-		# pprint(data)
+
 	return pd.DataFrame(data)
 
 
-# Read the gain data from the file
-file_path = "extinction_event_ea_task2/all_best_individuals_gain_results_for_extinction.txt"
-df = read_gain_data(file_path)
+file_path_1 = "extinction_event_ea_task2/group_one_best_results.txt"
+file_path_2 = "extinction_event_ea_task2/group_two_best_results.txt"
+file_path_3 = "island_ea_task2/group_one_best_results.txt"
+file_path_4 = "island_ea_task2/group_two_best_results.txt"
+df_1 = read_gain_data(file_path_1)
+df_2 = read_gain_data(file_path_2)
+df_3 = read_gain_data(file_path_3)
+df_4 = read_gain_data(file_path_4)
 
-# Check if DataFrame has data
-if df.empty:
+
+# check DataFrame has data
+if df_1.empty or df_2.empty or df_3.empty or df_4.empty:
 	print("No valid data found for plotting.")
 else:
-	# Group the data by 'Run' and 'Enemy_Group' and calculate the mean Gain
-	average_gain_per_run = df.groupby(['Run', 'Enemy_Group'])['Gain'].mean().reset_index()
+	# Gain values from all groups
+	group_one = df_1['Gain']
+	group_two = df_2['Gain']
+	group_three = df_3['Gain']
+	group_four = df_4['Gain']
 
-	# Separate the groups
-	group_one = average_gain_per_run[average_gain_per_run['Enemy_Group'] == 'enemies_group_one']['Gain']
-	group_two = average_gain_per_run[average_gain_per_run['Enemy_Group'] == 'enemies_group_two']['Gain']
+	plt.figure(figsize=(10, 6))
 
-	pprint(group_one)
-	pprint(group_two)
+	# create the boxplot with custom colors for the groups
+	boxprops_1 = dict(facecolor='skyblue', color='black')  # First color
+	boxprops_2 = dict(facecolor='lightgreen', color='black')  # Second color
 
-	# Create a boxplot comparing the average Gains for both groups
-	plt.figure(figsize=(8, 6))
-	plt.boxplot([group_one, group_two], patch_artist=True, labels=['Enemy Group One', 'Enemy Group Two'],
-	            showmeans=True, boxprops=dict(facecolor='lightblue'))
+	# Plotting each group separately to apply different colors
+	plt.boxplot(group_one, positions=[1], patch_artist=True, showmeans=True, boxprops=boxprops_1)
+	plt.boxplot(group_two, positions=[2], patch_artist=True, showmeans=True, boxprops=boxprops_2)
+	plt.boxplot(group_three, positions=[3], patch_artist=True, showmeans=True, boxprops=boxprops_1)
+	plt.boxplot(group_four, positions=[4], patch_artist=True, showmeans=True, boxprops=boxprops_2)
 
-	# Adding labels and title
-	plt.ylabel('Average Gain', fontsize=14)
-	plt.title('Distribution of Average Gains\nfor Enemy Group One vs Enemy Group Two', fontsize=16)
+	# x-tick labels for the pairs
+	plt.xticks([1.5, 3.5], ['EA1', 'EA2'], fontsize=12)
 
-	# Display the boxplot
-	plt.grid(True, linestyle='--', alpha=0.7)
+	# legend for color differentiation
+	plt.legend([plt.Line2D([0], [0], color='skyblue', lw=4),
+	            plt.Line2D([0], [0], color='lightgreen', lw=4)],
+	           ['Enemy group [1,2,3,7]', 'Enemy group [4,5,6,8]'], loc='best')
+
+	# background
+	plt.gca().set_facecolor('honeydew')  # Light greenish background
+
+	# grid, labels, and title
+	plt.grid(True, linestyle='--', alpha=0.5)
+	plt.ylabel('Gain', fontsize=14)
+	plt.title('Distribution of Gains for EA1 and EA2', fontsize=16)
+
 	plt.tight_layout()
 	plt.show()
